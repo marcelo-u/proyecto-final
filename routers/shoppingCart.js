@@ -4,8 +4,6 @@ const shoppingCartController = require("../controllers/logic/shoppingCart");
 const productos = [];
 const router = require("express").Router();
 
-const shoppingCart = new ShoppingCart(1, Date.now(), []);
-
 router.get("/listar/:id?", async (req, res) => {
   const respuesta = await shoppingCartController.getShoppingCart();
   res.send(respuesta);
@@ -18,6 +16,9 @@ router.post("/agregar/:id_producto", async (req, res) => {
   res.send(true);
 });
 
-router.delete("/borrar/:id", (req, res) => {});
+router.delete("/borrar/:id", async (req, res) => {
+  const fruta = await shoppingCartController.deleteProduct(req.params.id);
+  res.send(true);
+});
 
 module.exports = router;

@@ -1,0 +1,16 @@
+{
+	"id": 1,
+	"timestamp": 1628572232109,
+	"productos": [
+		{
+			"id": 1628478015508,
+			"timestamp": 1628478362867,
+			"nombre": "calculate edited",
+			"descripcion": "Ball edited",
+			"codigo": 186,
+			"foto": "http://placeimg.com/640/480",
+			"precio": 922.83,
+			"stock": 999
+		}
+	]
+}

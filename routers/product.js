@@ -9,26 +9,32 @@ router.get("/listar/:id?", async (req, res) => {
 });
 
 router.post("/agregar", (req, res) => {
+  const ts = Date.now();
   const prod = new Product(
-    req.body.id,
-    Date.now(),
+    ts,
+    ts,
     req.body.nombre,
     req.body.descripcion,
     req.body.codigo,
-    req.body.foto
+    req.body.foto,
+    req.body.precio,
+    req.body.stock
   );
   productController.addProduct(prod);
   res.send(prod);
 });
 
 router.put("/actualizar/:id", async (req, res) => {
+  const ts = Date.now();
   const prod = new Product(
     req.body.id,
-    Date.now(),
+    ts,
     req.body.nombre,
     req.body.descripcion,
     req.body.codigo,
-    req.body.foto
+    req.body.foto,
+    req.body.precio,
+    req.body.stock
   );
   await productController.updateProduct(prod);
   res.send(prod);

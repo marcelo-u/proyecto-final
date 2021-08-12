@@ -2,6 +2,7 @@ const Product = require("../../model/product");
 const ProductDBManager = require("../persistence/product");
 
 const fs = require("fs");
+const { isAdmin } = require("../auth");
 const file = "db/products.txt";
 
 const addProduct = async (p) => {
@@ -11,6 +12,7 @@ const addProduct = async (p) => {
 };
 
 const getProducts = async (id) => {
+  console.log(isAdmin);
   if (id) {
     const all = await ProductDBManager.readProducts();
     const products = all.filter((x) => x.id === Number(id));
