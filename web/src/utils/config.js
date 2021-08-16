@@ -1,7 +1,6 @@
 const config = {
   admin: false,
-  PORT: 8080,
-  HOST: "http://localhost",
+  HOST: "http://localhost:8080",
 };
 
 export default config;

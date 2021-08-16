@@ -13,7 +13,7 @@ const apiCarrito = {
 };
 
 const { HOST, PORT } = config;
-const baseUrl = `${HOST}:${PORT}`;
+const baseUrl = `${HOST}`;
 
 const get = async (endpoint) => {
   try {
