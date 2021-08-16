@@ -12,11 +12,10 @@ const addProduct = async (p) => {
 };
 
 const getProducts = async (id) => {
-  console.log(isAdmin);
   if (id) {
     const all = await ProductDBManager.readProducts();
-    const products = all.filter((x) => x.id === Number(id));
-    return products;
+    const product = all.find((x) => x.id === Number(id));
+    return product ? product : {};
   } else {
     return await ProductDBManager.readProducts();
   }

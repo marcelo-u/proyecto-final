@@ -14,7 +14,6 @@ const readProducts = async () => {
     const arr = await fs.promises.readFile(file);
     return JSON.parse(arr);
   } catch (err) {
-    console.log("empty");
     return [];
   }
 };

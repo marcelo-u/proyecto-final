@@ -1,29 +1,33 @@
-const productos = [];
 const router = require("express").Router();
-const ShoppingCart = require("../../model/shoppingCart");
+const Product = require("../../model/product");
+const ScItem = require("../../model/ScItem");
 const productController = require("./product");
 const ShoppingCartDBManager = require("../persistence/shoppingCart");
 
-const shoppingCart = new ShoppingCart(1, Date.now(), productos);
-
-const getShoppingCart = async () =>
-  await ShoppingCartDBManager.readShoppingCart();
+const getShoppingCart = async (id) => {
+  if (id) {
+    const shoppingCart = await ShoppingCartDBManager.readShoppingCart();
+    const scItem = shoppingCart.find((x) => x.id === Number(id));
+    return scItem || {};
+  } else return await ShoppingCartDBManager.readShoppingCart();
+};
 
 const addProduct = async (id) => {
-  const prods = await productController.getProducts(id);
-  const sc = await ShoppingCartDBManager.readShoppingCart();
-  sc.productos = [...sc.productos, ...prods];
-  console.log(sc);
-  await ShoppingCartDBManager.writeShoppingCart(sc);
+  const ts = Date.now();
+  const prod = await productController.getProducts(id);
+  const scItem = new ScItem(ts, ts, prod);
+  const shoppingCart = await ShoppingCartDBManager.readShoppingCart();
+  shoppingCart.push(scItem);
+  await ShoppingCartDBManager.writeShoppingCart(shoppingCart);
 };
 
 const deleteProduct = async (id) => {
-  const sc = await ShoppingCartDBManager.readShoppingCart();
-  console.log(sc);
-  console.log("Deleting");
-  const { productos } = sc;
-  sc.productos = productos.filter((prod) => prod.id !== Number(id));
-  await ShoppingCartDBManager.writeShoppingCart(sc);
+  const shoppingCart = await ShoppingCartDBManager.readShoppingCart();
+  const sc = shoppingCart.filter((scItem) => scItem.id !== Number(id));
+  if (sc.length !== shoppingCart.length) {
+    await ShoppingCartDBManager.writeShoppingCart(sc);
+    return { status: "ok" };
+  } else return {};
 };
 
 module.exports = { getShoppingCart, addProduct, deleteProduct };
