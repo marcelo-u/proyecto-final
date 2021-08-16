@@ -88,5 +88,25 @@
 		"foto": "http://placeimg.com/640/480",
 		"precio": 890.52,
 		"stock": 1000
+	},
+	{
+		"id": 1629078323238,
+		"timestamp": 1629078323238,
+		"nombre": "bypassing",
+		"descripcion": "maroon description",
+		"codigo": 436,
+		"foto": "http://placeimg.com/640/480",
+		"precio": 888.42,
+		"stock": 1000
+	},
+	{
+		"id": 1629078410761,
+		"timestamp": 1629078410761,
+		"nombre": "matrix",
+		"descripcion": "Borders description",
+		"codigo": 935,
+		"foto": "http://placeimg.com/640/480",
+		"precio": 8.7,
+		"stock": 1000
 	}
 ]
