@@ -1,5 +1,5 @@
 const config = {
-  admin: false,
+  admin: true,
   HOST: "http://localhost:8080",
 };
 
