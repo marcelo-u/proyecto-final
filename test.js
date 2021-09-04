@@ -41,6 +41,15 @@ const deleteTest = async () => {
   console.log(deleted);
 };
 
-deleteTest();
-
+//deleteTest();
 // test();
+
+const req = {
+  body: {
+    name: "marcelo",
+    lastName: "Urreli",
+  },
+  params: { id: 1 },
+};
+
+console.log(payload, id);

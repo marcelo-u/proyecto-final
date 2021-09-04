@@ -1,3 +1,4 @@
+const { endsWith } = require("sequelize/types/lib/operators");
 const ProductService = require("../services/products");
 
 const service = new ProductService();
@@ -21,4 +22,19 @@ exports.addProduct = async (req, res, next) => {
     stock,
   });
   res.send(productCreated);
+};
+
+exports.updateProduct = async (req, res, next) => {
+  const {
+    body: payload,
+    params: { id },
+  } = req;
+  const productUpdated = await service.updateProduct(id, payload);
+  res.send(productUpdated);
+};
+
+exports.deleteProduct = async (req, res, next) => {
+  const { id } = req.params;
+  const productDeleted = await service.deleteProduct(id);
+  res.send(productDeleted);
 };
