@@ -40,19 +40,5 @@
 			"precio": 360.43,
 			"stock": 1000
 		}
-	},
-	{
-		"id": 1630380378982,
-		"timestamp": 1630380378982,
-		"producto": {
-			"id": 1629078410761,
-			"timestamp": 1629078410761,
-			"nombre": "matrix",
-			"descripcion": "Borders description",
-			"codigo": 935,
-			"foto": "http://placeimg.com/640/480",
-			"precio": 8.7,
-			"stock": 1000
-		}
 	}
 ]

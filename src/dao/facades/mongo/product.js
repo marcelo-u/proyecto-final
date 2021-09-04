@@ -9,6 +9,8 @@ class ProductFacade {
 
   async getAllProducts() {
     const products = await _productModel.find();
+    console.log(products);
+
     return products;
   }
 

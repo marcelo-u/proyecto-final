@@ -9,5 +9,6 @@ const productSchema = new Schema({
   precio: String,
   stock: String,
 });
+productSchema.set("toJSON", { virtuals: true });
 // Objeto o la clase que me da acceso a los métodos para hacer el crud
 module.exports = model("Product", productSchema);
