@@ -34,9 +34,6 @@ exports.updateProduct = async (req, res, next) => {
 
 exports.deleteProduct = async (req, res, next) => {
   const { id } = req.params;
-  console.log("id");
-  console.log(req.params);
-  console.log(id);
   const productDeleted = await service.deleteProduct(id);
   res.send(productDeleted);
 };

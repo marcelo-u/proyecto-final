@@ -9,8 +9,6 @@ class ProductFacade {
 
   async getAllProducts() {
     const products = await _productModel.find();
-    console.log(products);
-
     return products;
   }
 
@@ -36,11 +34,3 @@ class ProductFacade {
 }
 
 module.exports = ProductFacade;
-
-/*
-async addProduct(product) {
-    const productCreated = await productModel.create(product);
-    console.log(productCreated);
-    return productCreated;
-  }
-  */
