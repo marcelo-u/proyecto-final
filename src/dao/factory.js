@@ -1,3 +1,5 @@
+const { DB_SOURCE } = require("../config/globals");
+
 module.exports = factory = () => {
   const facedePaths = {
     1: {
@@ -9,8 +11,8 @@ module.exports = factory = () => {
       scItem: "./facades/mysql/shoppingcartitem",
     },
   };
-  const ProductFacade = require(facedePaths[1].product);
-  const ShoppingCartItemFacade = require(facedePaths[1].scItem);
+  const ProductFacade = require(facedePaths[DB_SOURCE].product);
+  const ShoppingCartItemFacade = require(facedePaths[DB_SOURCE].scItem);
 
   return { ProductFacade, ShoppingCartItemFacade };
 };

@@ -1,9 +1,11 @@
 const { Sequelize } = require("sequelize");
-let _sequelize = null;
+const dbConfig = require("../../../config/mysql.json");
+const { MYSQL_ENV } = require("../../../config/globals");
 
 exports.getConnection = () => {
-  return new Sequelize("ecommerce", "root", null, {
-    dialect: "mysql",
-    host: "127.0.0.1",
+  const { database, username, host, dialect } = dbConfig[MYSQL_ENV];
+  return new Sequelize(database, username, null, {
+    dialect,
+    host,
   });
 };
