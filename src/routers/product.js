@@ -25,7 +25,6 @@ const elementExists = async (req, res, next) => {
 };
 
 router.get("/listar/:id?", elementExists, listProducts);
-router.get("/listar/:nombre?&:codigo?&precio?&:stock?", listProducts);
 router.post("/agregar", adminRequired, addProduct);
 router.put("/actualizar/:id", adminRequired, elementExists, updateProduct);
 router.delete("/borrar/:id", adminRequired, elementExists, deleteProduct);

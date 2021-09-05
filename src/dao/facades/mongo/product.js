@@ -7,8 +7,8 @@ class ProductFacade {
     getConnection();
   }
 
-  async getAllProducts() {
-    const products = await _productModel.find();
+  async getAllProducts(filter) {
+    const products = await _productModel.find(filter ? filter : {});
     return products;
   }
 
