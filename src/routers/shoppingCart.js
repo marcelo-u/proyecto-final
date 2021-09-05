@@ -14,16 +14,8 @@ const prodExists = async (req, res, next) => {
   next();
 };
 
-const elementExists = async (req, res, next) => {
-  // const found = await shoppingCartController.getShoppingCart(req.params.id);
-  // Object.entries(found).length !== 0
-  //   ? next()
-  //   : res.status(404).send({ error: 0, descripcion: "elemento no encontrado" });
-  next();
-};
-
-router.get("/listar/:id?", elementExists, listShoppingCartItems);
+router.get("/listar/:id?", listShoppingCartItems);
 router.post("/agregar/:id_producto", addShoppingCartItem);
-router.delete("/borrar/:id", elementExists, deleteShoppingCartItem);
+router.delete("/borrar/:id", deleteShoppingCartItem);
 
 module.exports = router;

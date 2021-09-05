@@ -5,12 +5,12 @@ const PORT = process.env.PORT || 8080;
 const routerProducto = require("./routers/product");
 const routerShoppingCart = require("./routers/shoppingCart");
 const routerInvalid = require("./routers/routerInvalid");
-const factory = require("./dao/factory");
+const { ADMIN } = require("./config/globals");
 
 //admin true o false
 const admin = true;
 
-app.set("admin", admin);
+app.set("admin", ADMIN);
 
 app.use(cors());
 app.use(json());
