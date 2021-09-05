@@ -1,3 +1,4 @@
+const { query } = require("express");
 const { getConnection } = require("../../db/mysql/db");
 
 let _sequelize = null;
@@ -9,9 +10,24 @@ class ProductFacade {
     _productModel = require("../../models/mysql/product")(_sequelize);
   }
 
-  async getAllProducts() {
-    const products = await _productModel.findAll({ raw: true });
+  async getAllProducts(filter) {
+    let query = {};
+    if (filter) {
+      query = { where: filter };
+    }
+    const products = await _productModel.findAll({
+      ...query,
+      ...{ raw: true },
+    });
     return products;
+  }
+
+  async pfilter(filter) {
+    const filtered = await _productModel.findAll({
+      ...filter,
+      ...{ raw: true },
+    });
+    return filtered;
   }
 
   async getProductById(id) {
@@ -32,7 +48,6 @@ class ProductFacade {
   }
 
   async deleteProduct(id) {
-    console.log("test");
     const productDeleted = await _productModel.destroy({
       where: { id: Number(id) },
     });

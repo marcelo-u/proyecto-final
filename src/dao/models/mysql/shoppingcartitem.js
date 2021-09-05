@@ -1,6 +1,6 @@
 "use strict";
-const { Model } = require("sequelize");
-module.exports = (sequelize, DataTypes) => {
+const { Model, DataTypes } = require("sequelize");
+module.exports = (sequelize) => {
   class ShoppingCartItem extends Model {
     /**
      * Helper method for defining associations.
@@ -14,7 +14,12 @@ module.exports = (sequelize, DataTypes) => {
   ShoppingCartItem.init(
     {
       timestamp: DataTypes.STRING,
-      product: DataTypes.INTEGER,
+      product: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: { model: "product", key: "Id" },
+        field: "product",
+      },
     },
     {
       sequelize,

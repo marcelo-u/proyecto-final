@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import Search from "./components/Search";
 import Card from "./components/Card";
 import Cart from "./components/Cart";
 import InputProduct from "./components/InputProduct";
@@ -7,6 +8,7 @@ import { apiCarrito, apiProducto } from "./utils/api";
 import config from "./utils/config";
 
 const App = () => {
+  const [filter, setFilter] = useState({});
   const [admin, setAdmin] = useState([false]);
   const [prods, setProds] = useState([]);
   const [carrito, setCarrito] = useState([]);
@@ -17,7 +19,7 @@ const App = () => {
     setAdmin(config.admin);
     switch (flag) {
       case "load": {
-        const resultProds = await apiProducto.listar();
+        const resultProds = await apiProducto.listar(filter);
         setProds(resultProds.hasOwnProperty("error") ? [] : resultProds);
         const resultSc = await apiCarrito.listar();
         setCarrito(resultSc.hasOwnProperty("error") ? [] : resultSc);
@@ -84,6 +86,7 @@ const App = () => {
       <div class="row">
         <div class="column">
           <h2>Productos</h2>
+          <Search cb={setFlag} setFilter={setFilter} />
           {prods.map((prod) => (
             <div key={prod.id}>
               <Card

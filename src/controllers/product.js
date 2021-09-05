@@ -4,8 +4,9 @@ const service = new ProductService();
 
 exports.listProducts = async (req, res, next) => {
   const { id } = req.params;
+  const { query: filter } = req;
   res.send(
-    id ? await service.getProductById(id) : await service.getAllProducts()
+    id ? await service.getProductById(id) : await service.getAllProducts(filter)
   );
 };
 

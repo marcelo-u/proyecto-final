@@ -3,8 +3,8 @@ const { ProductFacade } = factory();
 pf = new ProductFacade();
 
 module.exports = class {
-  async getAllProducts() {
-    const products = await pf.getAllProducts();
+  async getAllProducts(filter) {
+    const products = await pf.getAllProducts(filter);
     return products ? products : [];
   }
 

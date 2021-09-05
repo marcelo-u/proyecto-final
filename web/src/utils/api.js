@@ -1,7 +1,8 @@
 import config from "./config";
 const apiProducto = {
   agregar: async (p) => await post("/producto/agregar", p),
-  listar: async () => await get(`/producto/listar`),
+  listar: async (filter) =>
+    await get(`/producto/listar`, filter ? filter : null),
   actualizar: async (p) => await put(`/producto/actualizar/${p.id}`, p),
   borrar: async (id) => await del(`/producto/borrar/${id}`),
 };
@@ -15,9 +16,13 @@ const apiCarrito = {
 const { HOST, PORT } = config;
 const baseUrl = `${HOST}`;
 
-const get = async (endpoint) => {
+const get = async (endpoint, filter) => {
+  let params = "";
+  if (filter) {
+    params = new URLSearchParams(filter);
+  }
   try {
-    const result = await fetch(`${baseUrl}${endpoint}`);
+    const result = await fetch(`${baseUrl}${endpoint}?` + params);
     const data = await result.json();
     return data;
   } catch (err) {
@@ -65,6 +70,15 @@ const del = async (endpoint) => {
   } catch (err) {
     return { error: `${endpoint}: no se ha podido efectuar la operación` };
   }
+};
+
+const toQueryString = (obj) => {
+  let str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
 };
 
 export { apiProducto, apiCarrito };

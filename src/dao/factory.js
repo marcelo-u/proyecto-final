@@ -10,7 +10,7 @@ module.exports = factory = () => {
     },
   };
   const ProductFacade = require(facedePaths[2].product);
-  const ShoppingCartItemFacade = require(facedePaths[1].scItem);
+  const ShoppingCartItemFacade = require(facedePaths[2].scItem);
 
   return { ProductFacade, ShoppingCartItemFacade };
 };
