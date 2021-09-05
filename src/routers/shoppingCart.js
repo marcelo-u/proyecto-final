@@ -1,5 +1,3 @@
-const shoppingCartController = require("../controllers/logic/shoppingCart");
-const productController = require("../controllers/logic/product");
 const {
   listShoppingCartItems,
   addShoppingCartItem,
