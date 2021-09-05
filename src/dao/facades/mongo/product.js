@@ -28,6 +28,10 @@ class ProductFacade {
   }
 
   async deleteProduct(id) {
+    //TODO: workaround: se tiene que hacer con el hook de mongoose: Schame.pre(... etc)
+    const _shoppingCartItemsModel = require("../../models/atlas/shoppingCartItem");
+    await _shoppingCartItemsModel.deleteMany({ product: id });
+    // ---
     const productDeleted = await _productModel.findByIdAndDelete(id);
     return productDeleted;
   }

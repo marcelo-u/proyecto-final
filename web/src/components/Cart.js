@@ -22,13 +22,13 @@ const Cart = ({ items, cb }) => {
             </tr>
           </thead>
           <tbody>
-            {items.map(({ id, producto }) => (
+            {items.map(({ id, product }) => (
               <tr key={id}>
-                <td>{producto.codigo}</td>
-                <td>{producto.nombre}</td>
-                <td>{producto.precio}</td>
+                <td>{product.codigo}</td>
+                <td>{product.nombre}</td>
+                <td>{product.precio}</td>
                 <td>
-                  <img src={producto.foto} alt="foto" width="100px" />
+                  <img src={product.foto} alt="foto" width="100px" />
                 </td>
                 <td>
                   <div class="btn danger" onClick={handleRemove.bind(this, id)}>

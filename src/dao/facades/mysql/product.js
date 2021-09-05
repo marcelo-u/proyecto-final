@@ -10,8 +10,33 @@ class ProductFacade {
   }
 
   async getAllProducts() {
-    const data = await _productModel.findAll({ raw: true });
-    return data;
+    const products = await _productModel.findAll({ raw: true });
+    return products;
+  }
+
+  async getProductById(id) {
+    const product = await _productModel.findByPk(id);
+    return product;
+  }
+
+  async addProduct(product) {
+    const productCreated = await _productModel.create(product);
+    return productCreated;
+  }
+
+  async updateProduct(id, payload) {
+    const productUpdated = await _productModel.update(payload, {
+      where: { id },
+    });
+    return productUpdated;
+  }
+
+  async deleteProduct(id) {
+    console.log("test");
+    const productDeleted = await _productModel.destroy({
+      where: { id: Number(id) },
+    });
+    return { productDeleted };
   }
 }
 

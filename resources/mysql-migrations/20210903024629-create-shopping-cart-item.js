@@ -11,7 +11,7 @@ module.exports = {
       timestamp: {
         type: Sequelize.STRING,
       },
-      producto: {
+      product: {
         type: Sequelize.INTEGER,
         references: {
           model: {

@@ -12,14 +12,17 @@ module.exports = class {
     const product = await pf.getProductById(id);
     return product ? product : {};
   }
+
   async addProduct(product) {
     const productCreated = await pf.addProduct(product);
     return productCreated;
   }
+
   async updateProduct(id, payload) {
     const productUpdated = await pf.updateProduct(id, payload);
     return productUpdated ? productUpdated : {};
   }
+
   async deleteProduct(id) {
     const productDeleted = await pf.deleteProduct(id);
     return productDeleted ? productDeleted : {};

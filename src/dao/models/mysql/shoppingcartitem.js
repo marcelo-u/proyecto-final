@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   ShoppingCartItem.init(
     {
       timestamp: DataTypes.STRING,
-      producto: DataTypes.INTEGER,
+      product: DataTypes.INTEGER,
     },
     {
       sequelize,
