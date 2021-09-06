@@ -8,7 +8,8 @@ class ProductFacade {
   }
 
   async getAllProducts(filter) {
-    const products = await _productModel.find(filter ? filter : {});
+    const query = prepareQuery(filter);
+    const products = await _productModel.find(query ? query : {});
     return products;
   }
 
@@ -36,5 +37,23 @@ class ProductFacade {
     return productDeleted;
   }
 }
+
+const prepareQuery = (filter) => {
+  let query = {};
+  const { nombre, codigo, precio, precioMax, stock, stockMax } = filter;
+  if (nombre) query = { ...query, ...{ nombre } };
+  if (codigo) query = { ...query, ...{ codigo } };
+  if (precio && precioMax)
+    query = {
+      ...query,
+      ...{ precio: { $gt: Number(precio) - 1, $lt: Number(precioMax) + 1 } },
+    };
+  if (stock && stockMax)
+    query = {
+      ...query,
+      ...{ stock: { $gt: Number(stock) - 1, $lt: Number(stockMax) + 1 } },
+    };
+  return query;
+};
 
 module.exports = ProductFacade;

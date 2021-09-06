@@ -5,6 +5,8 @@ const Search = ({ cb, setFilter }) => {
   const inputCode = document.querySelector("#search-code");
   const inputPrice = document.querySelector("#search-price");
   const inputStock = document.querySelector("#search-stock");
+  const inputPriceMax = document.querySelector("#search-price-max");
+  const inputStockMax = document.querySelector("#search-stock-max");
 
   const handleFilter = () => {
     const filter = {};
@@ -12,6 +14,8 @@ const Search = ({ cb, setFilter }) => {
     if (inputCode.value) filter.codigo = inputCode.value;
     if (inputPrice.value) filter.precio = inputPrice.value;
     if (inputStock.value) filter.stock = inputStock.value;
+    if (inputPriceMax.value) filter.precioMax = inputPriceMax.value;
+    if (inputStockMax.value) filter.stockMax = inputStockMax.value;
     setFilter(filter);
     cb("product-updated");
   };
@@ -34,18 +38,34 @@ const Search = ({ cb, setFilter }) => {
           ></input>
         </div>
         <div class="column">
-          <input
-            id="search-price"
-            type="number"
-            placeholder="Precio"
-            defaultValue=""
-          ></input>
-          <input
-            id="search-stock"
-            type="number"
-            placeholder="Stock"
-            defaultValue=""
-          ></input>
+          <div class="column">
+            <input
+              id="search-price"
+              type="number"
+              placeholder="Precio Mín"
+              defaultValue=""
+            ></input>
+            <input
+              id="search-stock"
+              type="number"
+              placeholder="Stock Mín"
+              defaultValue=""
+            ></input>
+          </div>
+          <div class="column">
+            <input
+              id="search-price-max"
+              type="number"
+              placeholder="Precio Máx"
+              defaultValue=""
+            ></input>
+            <input
+              id="search-stock-max"
+              type="number"
+              placeholder="Stock Máx"
+              defaultValue=""
+            ></input>
+          </div>
         </div>
       </div>
       <div class="row">

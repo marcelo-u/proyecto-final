@@ -1,5 +1,6 @@
 const { query } = require("express");
 const { getConnection } = require("../../db/mysql/db");
+const { Op } = require("sequelize");
 
 let _sequelize = null;
 let _productModel = null;
@@ -11,10 +12,7 @@ class ProductFacade {
   }
 
   async getAllProducts(filter) {
-    let query = {};
-    if (filter) {
-      query = { where: filter };
-    }
+    const query = prepareQuery(filter);
     const products = await _productModel.findAll({
       ...query,
       ...{ raw: true },
@@ -54,5 +52,23 @@ class ProductFacade {
     return { productDeleted };
   }
 }
+
+const prepareQuery = (filter) => {
+  let where = {};
+  const { nombre, codigo, precio, precioMax, stock, stockMax } = filter;
+  if (nombre) where = { ...where, ...{ nombre } };
+  if (codigo) where = { ...where, ...{ codigo } };
+  if (precio && precioMax)
+    where = {
+      ...where,
+      ...{ precio: { [Op.between]: [Number(precio), Number(precioMax)] } },
+    };
+  if (stock && stockMax)
+    where = {
+      ...where,
+      ...{ stock: { [Op.between]: [Number(stock), Number(stockMax)] } },
+    };
+  return { where };
+};
 
 module.exports = ProductFacade;
