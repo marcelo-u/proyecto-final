@@ -14,7 +14,7 @@ exports.listShoppingCartItems = async (req, res, next) => {
 exports.addShoppingCartItem = async (req, res, next) => {
   const { id_producto: product } = req.params;
   const shoppingCartItemCreated = await service.addShoppingCartItem({
-    ts: Date.now(),
+    timestamp: Date.now(),
     product,
   });
   res.send(shoppingCartItemCreated);

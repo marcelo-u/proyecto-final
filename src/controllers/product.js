@@ -11,9 +11,10 @@ exports.listProducts = async (req, res, next) => {
 };
 
 exports.addProduct = async (req, res, next) => {
-  const { ts, nombre, descripcion, codigo, foto, precio, stock } = req.body;
+  const timestamp = Date.now().toString();
+  const { nombre, descripcion, codigo, foto, precio, stock } = req.body;
   const productCreated = await service.addProduct({
-    ts,
+    timestamp,
     nombre,
     descripcion,
     codigo,
