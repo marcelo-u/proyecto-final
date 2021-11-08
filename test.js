@@ -12,7 +12,7 @@ const testEmail = async () => {
 const testPhone = async () => {
   await service.sendWhatsapp(
     "+5491137878904",
-    "Su pedido está siendo procesado..."
+    "Su pedido está siendo procesado.. ."
   );
 };
 
