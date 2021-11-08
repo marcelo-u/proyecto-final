@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import AuthContext from "../store/auth-context";
+import CartContext from "../store/cart-context";
 import { apiProducto, apiCarrito } from "../utils/api";
 
 const Card = ({ content, cb, admin, edit }) => {
+  const authCtx = useContext(AuthContext);
+  const cartCtx = useContext(CartContext);
   const handleAdd = async () => {
-    await apiCarrito.agregar(content.id).then(() => cb("updated"));
+    cartCtx.addItem(content);
+    await apiCarrito
+      .actualizar(authCtx.user.id, cartCtx.items)
+      .then(() => cb("updated"));
   };
 
   const handleEdit = async () => {
@@ -19,7 +26,6 @@ const Card = ({ content, cb, admin, edit }) => {
       <div class="card-row">
         <div class="card-column left">
           <img src={content.foto} alt="Text" style={{ height: "100px" }} />
-          <div>{admin ? content.id : ""}</div>
         </div>
         <div class="card-column center">
           <h4>
@@ -29,6 +35,7 @@ const Card = ({ content, cb, admin, edit }) => {
           <p>Cod: {content.codigo}</p>
           <p>Precio: ARS {content.precio}</p>
           <p>Stock: {content.stock}</p>
+          {admin && <p>[ID: {content.id}]</p>}
         </div>
         <div class="card-column right">
           <div class="btn add" onClick={handleAdd}>

@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const ShoppingCartItemSchema = require("./shoppingCartItem");
 
 const productSchema = new Schema({
   timestamp: String,

@@ -1,18 +1,29 @@
 const { DB_SOURCE } = require("../config/globals");
 
+/**
+ * Metodo que según el flag devuelve un conjunto de facades para el origen de datos
+ * 1: Mongo Atlas 2: mySQL, desde acá agregar nuevos tipos de base
+ **/
 module.exports = factory = () => {
-  const facedePaths = {
+  const facadePaths = {
     1: {
       product: "./facades/mongo/product",
-      scItem: "./facades/mongo/shoppingcartitem",
+      user: "./facades/mongo/user",
+      shoppingCart: "./facades/mongo/shoppingcart",
     },
     2: {
       product: "./facades/mysql/product",
       scItem: "./facades/mysql/shoppingcartitem",
+      user: "./facades/mysql/user",
     },
   };
-  const ProductFacade = require(facedePaths[DB_SOURCE].product);
-  const ShoppingCartItemFacade = require(facedePaths[DB_SOURCE].scItem);
+  const ProductFacade = require(facadePaths[DB_SOURCE].product);
+  const UserFacade = require(facadePaths[DB_SOURCE].user);
+  const ShoppingCartFacade = require(facadePaths[DB_SOURCE].shoppingCart);
 
-  return { ProductFacade, ShoppingCartItemFacade };
+  return {
+    ProductFacade,
+    UserFacade,
+    ShoppingCartFacade,
+  };
 };

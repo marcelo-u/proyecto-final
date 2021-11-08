@@ -8,9 +8,70 @@ const apiProducto = {
 };
 
 const apiCarrito = {
-  agregar: async (id) => await post(`/carrito/agregar/${id}`, {}),
-  listar: async () => await get("/carrito/listar"),
-  borrar: async (id) => await del(`/carrito/borrar/${id}`),
+  checkout: async (data) => await post(`/carrito/checkout`, data),
+  crear: async (user_id, products) =>
+    await post(`/carrito/crear/${user_id}`, products),
+  agregar: async (user_id, products) =>
+    await put(`/carrito/agregar/${user_id}`, products),
+  listar: async (user_id) => await get(`/carrito/listar/${user_id}`),
+  actualizar: async (user_id, items) =>
+    await put(`/carrito/agregar/${user_id}`, items),
+  eliminar: async (id) => await del(`/carrito/borrar/${id}`),
+};
+
+const apiLogin = {
+  prefix: async () => {
+    const result = await fetch(`${HOST}/prefix`);
+    const data = await result.json();
+    return data;
+  },
+  login: async (credentials) => {
+    try {
+      const result = await fetch(`${HOST}/auth/user/login`, {
+        method: "POST",
+        body: JSON.stringify(credentials),
+        headers: { "Content-Type": "Application/Json" },
+      });
+      const data = await result.json();
+      return data;
+    } catch (err) {}
+  },
+  register: async (form) => {
+    try {
+      const result = await fetch(`${HOST}/auth/user/register`, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: { "Content-Type": "Application/Json" },
+      });
+      const response = await result.json();
+      console.log(response);
+      return response;
+    } catch (err) {
+      console.log(form);
+      console.log("error " + err);
+    }
+  },
+  user: async () => {
+    try {
+      const result = await fetch(`${HOST}/auth/user`, {
+        credentials: "include",
+      });
+      const data = await result.json();
+      console.log(data);
+      return data;
+    } catch (err) {}
+  },
+  whoami: async (token) => {
+    try {
+      const result = await fetch(`${HOST}/auth/whoami`, {
+        headers: { authorization: `bearer ${token}` },
+      });
+      const data = await result.json();
+      return data.content;
+    } catch (err) {
+      console.log("error" + err);
+    }
+  },
 };
 
 const { HOST, PORT } = config;
@@ -26,7 +87,6 @@ const get = async (endpoint, filter) => {
     const data = await result.json();
     return data;
   } catch (err) {
-    console.log(err);
     return { error: `${endpoint}: no se ha podido efectuar la operación` };
   }
 };
@@ -55,7 +115,6 @@ const post = async (endpoint, body) => {
     });
     return data;
   } catch (err) {
-    console.log("error");
     return {
       error: `${endpoint}: no se ha podido efectuar la operación`,
     };
@@ -81,4 +140,4 @@ const toQueryString = (obj) => {
   return str.join("&");
 };
 
-export { apiProducto, apiCarrito };
+export { apiProducto, apiCarrito, apiLogin };
