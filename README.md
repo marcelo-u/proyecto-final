@@ -38,6 +38,8 @@
 
 ## Instrucciones
 
+[![Watch the video](https://res.cloudinary.com/hdsqazxtw/image/upload/v1570710978/coderhouse.jpg)](https://www.youtube.com/watch?v=-XjnWLd26Cs)
+
 ### prefijos
 
 existe un endpoint /prefix que devuelve una lista de prefijos internacionales para seleccionar durante el registro, estos se guardan localmente dentro de db.json en el root del proyecto.
@@ -58,7 +60,6 @@ tienen la logica de negocio para agregar productos, sumarlos al carrito, editar,
 ### carrito: checkout
 
 endpoint que notifica al administrador que un nuevo pedido se ha realizado, también se ocupa de eliminar el carrito actual luego de enviarse la compra.
-
 
 ## configuracion:
 

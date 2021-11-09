@@ -47,7 +47,8 @@ const LoginForm = () => {
     };
     const data = await apiLogin.register(form);
     if (data) {
-      alert(data);
+      console.log("login status");
+      console.log(data);
     }
   };
   const switchFormHandler = (event) => {
