@@ -7,23 +7,33 @@
 ### Auth
 
 [POST]localhost:8080/auth/user/register
+
 [POST]localhost:8080/auth/user/login
+
 [GET]localhost:8080/auth/whoami ((JWT req.))
 
 ### Producto
 
 [GET]localhost:8080/producto/listar/:id? (JWT req.)
+
 [POST]localhost:8080/producto/agregar (JWT req.)
+
 [DEL]localhost:8080/producto/borrar/:id (JWT req.)
+
 [PUT]localhost:8080/producto/actualizar/id (JWT req.)
 
 ### Carrito
 
 [POST]localhost:8080/carrito/crear/:user_id (JWT req.)
+
 [GET]localhost:8080/carrito/listar/:user_id (JWT req.)
+
 [PUT]localhost:8080/carrito/agregar/:user_id (JWT req.)
+
 [DEL]localhost:8080/carrito/borrar/:user_id (JWT req.)
+
 [DEL]localhost:8080/carrito/borrar/:id (JWT req.)
+
 [POST]localhost:8080/carrito/checkout (JWT req.)
 
 ## Instrucciones
@@ -49,13 +59,14 @@ tienen la logica de negocio para agregar productos, sumarlos al carrito, editar,
 
 endpoint que notifica al administrador que un nuevo pedido se ha realizado, también se ocupa de eliminar el carrito actual luego de enviarse la compra.
 
-### rollback
-
-npx sequelize-cli db:migrate:undo:all
 
 ## configuracion:
 
 toda la configuracion se setea en el .env: ver los comentarios en el archivo [.env_example] del root
+
+### rollback
+
+npx sequelize-cli db:migrate:undo:all
 
 ## Front de prueba
 
