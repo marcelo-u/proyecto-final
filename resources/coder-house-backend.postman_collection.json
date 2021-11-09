@@ -408,7 +408,7 @@
             "url": {
               "raw": "localhost:8080/prefix",
               "host": ["localhost"],
-              "port": "80",
+              "port": "8080",
               "path": ["prefix"]
             }
           },
