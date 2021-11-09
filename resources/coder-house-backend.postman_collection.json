@@ -1,294 +1,1064 @@
 {
-  "info": {
-    "_postman_id": "848b4d19-b2b1-4c9e-af76-f40c12093e44",
-    "name": "coder-house-backend",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "coder-desafio-9",
-      "item": [
-        {
-          "name": "static check",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8080/public/index.html",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["public", "index.html"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8080/api/productos",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos:id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8080/api/productos/0",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos", "0"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos:id",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"title\": \"Modified {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"{{$randomUrl}}/img.gif\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:8080/api/productos/2",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos", "2"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos:id",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "localhost:8080/api/productos/0",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos", "0"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "exec": [""],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"title\": \"Product {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"{{$randomUrl}}/img.gif\"\n}    \n\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:8080/api/productos",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "productos with images",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "exec": [""],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"title\": \"Product {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\":\"https://cdn2.iconfinder.com/data/icons/lightly-icons/30/random-480.png\"\n}    \n\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "localhost:8080/api/productos",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "productos"]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "name": "proyecto-final",
-      "item": [
-        {
-          "name": "producto",
-          "item": [
-            {
-              "name": "listar",
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "localhost:8080/producto/listar",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["producto", "listar"]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "agregar",
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"nombre\": \"{{$randomWord}}\",\n    \"descripcion\": \"{{$randomWord}} description\",\n    \"codigo\": {{$randomInt}},\n    \"foto\": \"{{$randomImageUrl}}\",\n    \"precio\": {{$randomPrice}},\n    \"stock\": 1000\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "localhost:8080/producto/agregar",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["producto", "agregar"]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "borrar",
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                  "raw": "localhost:8080/producto/borrar/1629074993751",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["producto", "borrar", "1629074993751"]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "actualizar",
-              "request": {
-                "method": "PUT",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"id\": 1628478015508,\n    \"nombre\": \"{{$randomWord}} edited\",\n    \"descripcion\": \"{{$randomWord}} edited\",\n    \"codigo\": {{$randomInt}},\n    \"foto\": \"{{$randomImageUrl}}\",\n    \"precio\": {{$randomPrice}},\n    \"stock\": 999\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "localhost:8080/producto/actualizar/1628478015508",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["producto", "actualizar", "1628478015508"]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "carrito",
-          "item": [
-            {
-              "name": "listar",
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "localhost:8080/carrito/listar",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["carrito", "listar"]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "agregar",
-              "request": {
-                "method": "POST",
-                "header": [],
-                "url": {
-                  "raw": "localhost:8080/carrito/agregar/1629078410761",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["carrito", "agregar", "1629078410761"]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "borrar",
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                  "raw": "localhost:8080/carrito/borrar/1629076180991",
-                  "host": ["localhost"],
-                  "port": "8080",
-                  "path": ["carrito", "borrar", "1629076180991"]
-                }
-              },
-              "response": []
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "variable": [
-    {
-      "key": "prods",
-      "value": "productos"
-    }
-  ]
+	"info": {
+		"_postman_id": "848b4d19-b2b1-4c9e-af76-f40c12093e44",
+		"name": "coder-house-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coder-desafio-9",
+			"item": [
+				{
+					"name": "static check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/public/index.html",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"public",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/productos/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Modified {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"{{$randomUrl}}/img.gif\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/productos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/productos/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Product {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"{{$randomUrl}}/img.gif\"\n}    \n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productos with images",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Product {{$randomWord}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\":\"https://cdn2.iconfinder.com/data/icons/lightly-icons/30/random-480.png\"\n}    \n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "proyecto-final",
+			"item": [
+				{
+					"name": "producto",
+					"item": [
+						{
+							"name": "listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:80/producto/listar",
+									"host": [
+										"localhost"
+									],
+									"port": "80",
+									"path": [
+										"producto",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "agregar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"{{$randomWord}}\",\n    \"descripcion\": \"{{$randomWord}} description\",\n    \"codigo\": {{$randomInt}},\n    \"foto\": \"{{$randomImageUrl}}\",\n    \"precio\": {{$randomPrice}},\n    \"stock\": 1000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/producto/agregar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"producto",
+										"agregar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "borrar",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/producto/borrar/1629074993751",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"producto",
+										"borrar",
+										"1629074993751"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1628478015508,\n    \"nombre\": \"{{$randomWord}} edited\",\n    \"descripcion\": \"{{$randomWord}} edited\",\n    \"codigo\": {{$randomInt}},\n    \"foto\": \"{{$randomImageUrl}}\",\n    \"precio\": {{$randomPrice}},\n    \"stock\": 999\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/producto/actualizar/1628478015508",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"producto",
+										"actualizar",
+										"1628478015508"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "carrito",
+					"item": [
+						{
+							"name": "listar",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/carrito/listar/6185d1b8a6efd1093d486aa4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carrito",
+										"listar",
+										"6185d1b8a6efd1093d486aa4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"_id\": \"61355c7474f232aed70cc6dd\",\n        \"timestamp\": \"1630887028279\",\n        \"nombre\": \"Parlante bluetooth\",\n        \"descripcion\": \"Parlante bluetooth noganet\",\n        \"codigo\": 1542,\n        \"foto\": \"https://picsum.photos/200\",\n        \"precio\": 200,\n        \"stock\": 35\n    },\n    {\n        \"_id\": \"61355c7474f232aed70cc6dd\",\n        \"timestamp\": \"1630887028279\",\n        \"nombre\": \"Parlante bluetooth\",\n        \"descripcion\": \"Parlante bluetooth noganet\",\n        \"codigo\": 1542,\n        \"foto\": \"https://picsum.photos/200\",\n        \"precio\": 200,\n        \"stock\": 35\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/carrito/crear/6185d1b8a6efd1093d486aa4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carrito",
+										"crear",
+										"6185d1b8a6efd1093d486aa4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "agregar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"_id\": \"61355c7474f232aed70cc6dd\",\n        \"timestamp\": \"1630887028279\",\n        \"nombre\": \"Parlante bluetooth\",\n        \"descripcion\": \"Parlante bluetooth noganet\",\n        \"codigo\": 1542,\n        \"foto\": \"https://picsum.photos/200\",\n        \"precio\": 200,\n        \"stock\": 35\n    },\n    {\n        \"_id\": \"61355c7474f232aed70cc6dd\",\n        \"timestamp\": \"1630887028279\",\n        \"nombre\": \"Parlante bluetooth\",\n        \"descripcion\": \"Parlante bluetooth noganet\",\n        \"codigo\": 1542,\n        \"foto\": \"https://picsum.photos/200\",\n        \"precio\": 111,\n        \"stock\": 35\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/carrito/agregar/618801b38b054c280d1fd16c",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carrito",
+										"agregar",
+										"618801b38b054c280d1fd16c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "borrar",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/carrito/borrar/6185d1b8a6efd1093d486aa4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carrito",
+										"borrar",
+										"6185d1b8a6efd1093d486aa4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"{{$randomEmail}}\",\n    \"password\": \"test123\",\n    \"name\": \"{{$randomFullName}}\",\n    \"age\": \"50\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"phone\":\"{{$randomPhoneNumber}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/user/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"test@test.com\",\n    \"password\":\"123456\"\n}\n\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/auth/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "whoami",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/auth/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "prefix",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:80/prefix",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"prefix"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coder-desafio-17",
+			"item": [
+				{
+					"name": "mensajes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/mensajes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mensajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mensajes Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"soy un mensaje editado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/mensajes/27",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mensajes",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coder-desafio-20",
+			"item": [
+				{
+					"name": "actualizar:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"edited sausage edited 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba917",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6139825db6d7f6a9d19ba917"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"edited product\",\n    \"categoria\": \"bluetooth description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/productos/6128d6c9d365d9c33a5c8fdd",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6128d6c9d365d9c33a5c8fdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba917",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6139825db6d7f6a9d19ba917"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"{{$randomCatchPhraseAdjective}} {{$randomProduct}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"http://placeimg.com/640/480\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coder-desafio-31",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"edited {{$randomAdjective}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba917",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6139825db6d7f6a9d19ba917"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "valid",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"edited {{$randomAdjective}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba917",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"productos",
+										"6139825db6d7f6a9d19ba917"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "invalido: id ok, no existe",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"edited sausage edited 2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba916",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"productos",
+										"6139825db6d7f6a9d19ba916"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "invalido: id no casteable",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"edited sausage edited 2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba91777777777",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"productos",
+										"6139825db6d7f6a9d19ba91777777777"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "borrar:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"edited product\",\n    \"categoria\": \"bluetooth description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/productos/6128d6c9d365d9c33a5c8fdd",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6128d6c9d365d9c33a5c8fdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/api/productos/6139825db6d7f6a9d19ba917",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos",
+								"6139825db6d7f6a9d19ba917"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"{{$randomCatchPhraseAdjective}} {{$randomProduct}}\",\n    \"price\": {{$randomPrice}},\n    \"thumbnail\": \"http://placeimg.com/640/480\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "email",
+			"item": [
+				{
+					"name": "hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"isai.quigley2@ethereal.email\",\n    \"name\": \"{{$randomFullName}}\",\n    \"message\": \"{{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/send-email",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"send-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-sms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"+5491137878904\",\n    \"name\": \"Murreli\",\n    \"message\": \"¿test!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/send-sms",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"send-sms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-whatsapp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"whatsapp:+5491137878904\",\n    \"name\": \"Murreli\",\n    \"message\": \"¿test!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/send-whatsapp",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"send-whatsapp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "prods",
+			"value": "productos"
+		}
+	]
 }
