@@ -1,38 +1,71 @@
 const { getConnection } = require("../../db/atlas/db");
-
 const _shoppingCartModel = require("../../models/atlas/ShoppingCart");
+const logger = require("../../../utils/logger");
+const log = logger.getLogger("default");
+const logFile = logger.getLogger("file");
 
 class ShoppingCartFacade {
   constructor() {
-    getConnection();
+    try {
+      getConnection();
+      log.info("DB Connected");
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async getAllShoppingCartItems(user) {
-    const sc = await _shoppingCartModel.findOne({ user }).populate("user");
-    return sc;
+    try {
+      const sc = await _shoppingCartModel.findOne({ user }).populate("user");
+      return sc;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async addShoppingCart(sc) {
-    const added = await _shoppingCartModel.create(sc);
-    return added;
+    try {
+      const added = await _shoppingCartModel.create(sc);
+      return added;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async updateShoppingCart(user, products) {
-    const scUpdated = await _shoppingCartModel.updateOne(
-      { user: user },
-      products
-    );
-    return scUpdated;
+    try {
+      const scUpdated = await _shoppingCartModel.updateOne(
+        { user: user },
+        products
+      );
+      return scUpdated;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async removeShoppingCart(user) {
-    const removed = await _shoppingCartModel.deleteOne({ user });
-    return removed;
+    try {
+      const removed = await _shoppingCartModel.deleteOne({ user });
+      return removed;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async removeShoppingCartById(id) {
-    const removed = await _shoppingCartModel.remove({ _id: id });
-    return removed;
+    try {
+      const removed = await _shoppingCartModel.remove({ _id: id });
+      return removed;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 }
 

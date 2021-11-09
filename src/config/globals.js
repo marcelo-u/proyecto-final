@@ -6,6 +6,7 @@ module.exports = {
   MONGO_URI: process.env.MONGO_URI || "",
   DB_SOURCE: process.env.DB_SOURCE || 1,
   MYSQL_ENV: process.env.MYSQL_ENV || "development",
+  LOG_FILE_PATH: process.env.LOG_FILE_PATH,
   ADMIN: process.env.ADMIN || false,
   COOKIE_SECRET: process.env.COOKIE_SECRET || "default",
   TWILIO_FROM_WHATSAPP: process.env.TWILIO_FROM_WHATSAPP,

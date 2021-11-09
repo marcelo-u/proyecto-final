@@ -15,7 +15,6 @@ const Cart = ({ items, cb }) => {
 
   const checkoutHandler = async () => {
     const itemsToSend = cartCtx.items;
-    console.log(cartCtx.id);
     const form = {
       items: itemsToSend,
       user: authCtx.user,

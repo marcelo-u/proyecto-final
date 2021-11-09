@@ -45,14 +45,12 @@ exports.deleteShoppingCartByUserId = async (req, res, next) => {
 
 exports.deleteShoppingCartById = async (req, res, next) => {
   const { id } = req.params;
-  console.log(id + " received");
   const deleted = await service.removeShoppingCartById(id);
   res.send(deleted);
 };
 
 exports.checkout = async (req, res, next) => {
   const data = req.body;
-  console.log(data);
   const deleted = await service.removeShoppingCart(data.user);
 
   const emailContent = `<h1>pedido de ${data.user.name}</h1><br/>

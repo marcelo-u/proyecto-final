@@ -14,7 +14,7 @@ const LoginForm = () => {
       setPrefixList(data.prefix);
     };
     loadPrefix();
-  }, [prefixList]);
+  }, []);
 
   const loginHandler = async (event) => {
     event.preventDefault();
@@ -47,7 +47,6 @@ const LoginForm = () => {
     };
     const data = await apiLogin.register(form);
     if (data) {
-      console.log(data);
       alert(data);
     }
   };
@@ -58,7 +57,6 @@ const LoginForm = () => {
 
   const onClick = () => {
     const e = document.getElementById("prefixDdl");
-    console.log(e.value);
     setPrefix("+" + e.value);
   };
 

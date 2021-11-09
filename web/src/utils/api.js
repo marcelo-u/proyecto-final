@@ -1,4 +1,5 @@
 import config from "./config";
+
 const apiProducto = {
   agregar: async (p) => await post("/producto/agregar", p),
   listar: async (filter) =>
@@ -44,7 +45,6 @@ const apiLogin = {
         headers: { "Content-Type": "Application/Json" },
       });
       const response = await result.json();
-      console.log(response);
       return response;
     } catch (err) {
       console.log(form);
@@ -52,23 +52,28 @@ const apiLogin = {
     }
   },
   user: async () => {
+    let data;
     try {
       const result = await fetch(`${HOST}/auth/user`, {
         credentials: "include",
       });
-      const data = await result.json();
-      console.log(data);
+      data = await result.json();
       return data;
-    } catch (err) {}
+    } catch (err) {
+      console.log(data);
+      console.log("error" + err);
+    }
   },
   whoami: async (token) => {
+    let data;
     try {
       const result = await fetch(`${HOST}/auth/whoami`, {
         headers: { authorization: `bearer ${token}` },
       });
-      const data = await result.json();
+      data = await result.json();
       return data.content;
     } catch (err) {
+      console.log(data);
       console.log("error" + err);
     }
   },
@@ -78,12 +83,15 @@ const { HOST, PORT } = config;
 const baseUrl = `${HOST}`;
 
 const get = async (endpoint, filter) => {
+  const token = sessionStorage.getItem("token");
   let params = "";
   if (filter) {
     params = new URLSearchParams(filter);
   }
   try {
-    const result = await fetch(`${baseUrl}${endpoint}?` + params);
+    const result = await fetch(`${baseUrl}${endpoint}?` + params, {
+      headers: { authorization: `bearer ${token}` },
+    });
     const data = await result.json();
     return data;
   } catch (err) {
@@ -91,12 +99,16 @@ const get = async (endpoint, filter) => {
   }
 };
 const put = async (endpoint, body) => {
+  const token = sessionStorage.getItem("token");
   try {
     const data = await fetch(`${baseUrl}${endpoint}`, {
       method: "PUT",
       mode: "cors",
       body: JSON.stringify(body),
-      headers: { "Content-Type": "Application/Json" },
+      headers: {
+        "Content-Type": "Application/Json",
+        authorization: `bearer ${token}`,
+      },
     });
     return data;
   } catch (err) {
@@ -106,12 +118,16 @@ const put = async (endpoint, body) => {
   }
 };
 const post = async (endpoint, body) => {
+  const token = sessionStorage.getItem("token");
   try {
     const data = await fetch(`${baseUrl}${endpoint}`, {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(body),
-      headers: { "Content-Type": "Application/Json" },
+      headers: {
+        "Content-Type": "Application/Json",
+        authorization: `bearer ${token}`,
+      },
     });
     return data;
   } catch (err) {
@@ -121,9 +137,11 @@ const post = async (endpoint, body) => {
   }
 };
 const del = async (endpoint) => {
+  const token = sessionStorage.getItem("token");
   try {
     const data = await fetch(`${baseUrl}${endpoint}`, {
       method: "DELETE",
+      headers: { authorization: `bearer ${token}` },
     });
     return data;
   } catch (err) {

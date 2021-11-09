@@ -55,7 +55,6 @@ const App = () => {
         cartCtx.loadItems(resultSc.products || []);
         setCarrito(resultSc.products || []);
         cartCtx.addId(resultSc.id);
-        console.log(resultSc);
         break;
       }
       case "updated": {

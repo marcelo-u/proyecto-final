@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:8080"
+
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
+
+scenarios:
+  - name: "Listar"
+    flow:
+      - get:
+          url: "/producto/listar"
+          headers:
+            authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxODgwMWIzOGIwNTRjMjgwZDFmZDE2YyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHh2NE5hSXdxOEdMUjhES09IUkYuaWVZWkpIMkJrNFlBby5ObEJ4VlFJajZkV1BlZ0ViWS9tIiwibmFtZSI6Im1hcmNlbG8iLCJhZGRyZXNzIjoiZml0dGUgMTc1NSIsImFnZSI6NDAsInBob25lIjoiMjAyMDIwMjAiLCJfX3YiOjAsImlkIjoiNjE4ODAxYjM4YjA1NGMyODBkMWZkMTZjIn0sImlhdCI6MTYzNjQxODQ5N30.p8eYc2AoJ3xz1r2_gwWhQN-u8ZPdOfys0ukNciSWO4I"

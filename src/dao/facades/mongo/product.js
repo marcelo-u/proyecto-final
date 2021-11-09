@@ -1,40 +1,72 @@
 const { getConnection } = require("../../db/atlas/db");
-
 const _productModel = require("../../models/atlas/product");
+const logger = require("../../../utils/logger");
+const log = logger.getLogger("default");
+const logFile = logger.getLogger("file");
 
 class ProductFacade {
   constructor() {
-    getConnection();
+    try {
+      getConnection();
+      log.info("DB Connected");
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async getAllProducts(filter) {
     const query = prepareQuery(filter);
-    const products = await _productModel.find(query ? query : {});
-    return products;
+    try {
+      const products = await _productModel.find(query ? query : {});
+      return products;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async getProductById(id) {
-    const productCreated = await _productModel.findById(id);
-    return productCreated;
+    try {
+      const productCreated = await _productModel.findById(id);
+      return productCreated;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async addProduct(product) {
-    const productCreated = await _productModel.create(product);
-    return productCreated;
+    try {
+      const productCreated = await _productModel.create(product);
+      return productCreated;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
-
   async updateProduct(id, payload) {
-    const productUpdated = await _productModel.findByIdAndUpdate(id, payload);
-    return productUpdated;
+    try {
+      const productUpdated = await _productModel.findByIdAndUpdate(id, payload);
+      return productUpdated;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 
   async deleteProduct(id) {
     //TODO: workaround: se tiene que hacer con el hook de mongoose: Schame.pre(... etc)
-    const _shoppingCartItemsModel = require("../../models/atlas/shoppingCartItem");
-    await _shoppingCartItemsModel.deleteMany({ product: id });
+    //const _shoppingCartItemsModel = require("../../models/atlas/shoppingCartItem");
+    //await _shoppingCartItemsModel.deleteMany({ product: id });
     // ---
-    const productDeleted = await _productModel.findByIdAndDelete(id);
-    return productDeleted;
+    try {
+      const productDeleted = await _productModel.findByIdAndDelete(id);
+      return productDeleted;
+    } catch (error) {
+      log.error("ERROR:", error);
+      logFile.error("ERROR:", error);
+    }
   }
 }
 

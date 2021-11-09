@@ -1,0 +1,538 @@
+Statistical profiling result from isolate-0x102d7a000-8230-v8.log, (12810 ticks, 11 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     27    0.2%          /usr/lib/system/libsystem_kernel.dylib
+     25    0.2%          /usr/lib/system/libsystem_platform.dylib
+      7    0.1%          /usr/lib/system/libsystem_malloc.dylib
+      6    0.0%          /usr/lib/system/libsystem_pthread.dylib
+      3    0.0%          /usr/lib/libc++abi.dylib
+      1    0.0%          /usr/lib/libc++.1.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     13    0.1%    0.1%  LazyCompile: *normalizeString path.js:52:25
+      9    0.1%    0.1%  LazyCompile: *target._send internal/child_process.js:689:26
+      6    0.0%    0.0%  LazyCompile: *formatWithOptions internal/util/inspect.js:1876:27
+      5    0.0%    0.0%  LazyCompile: *resolve path.js:973:10
+      4    0.0%    0.0%  LazyCompile: *receiver /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:28:18
+      4    0.0%    0.0%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      3    0.0%    0.0%  LazyCompile: *revive /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/flatted/cjs/index.js:75:18
+      3    0.0%    0.0%  LazyCompile: *realpathSync fs.js:1568:22
+      3    0.0%    0.0%  LazyCompile: *parseChannelMessages internal/child_process/serialization.js:96:24
+      3    0.0%    0.0%  LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+      3    0.0%    0.0%  LazyCompile: *dirname path.js:1127:10
+      3    0.0%    0.0%  LazyCompile: *debug /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/node_modules/debug/src/common.js:66:17
+      3    0.0%    0.0%  LazyCompile: *channel.onread internal/child_process.js:557:28
+      3    0.0%    0.0%  LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      2    0.0%    0.0%  LazyCompile: *syncExports internal/bootstrap/loaders.js:252:14
+      2    0.0%    0.0%  LazyCompile: *readPackage internal/modules/cjs/loader.js:231:21
+      2    0.0%    0.0%  LazyCompile: *processPromiseRejections internal/process/promises.js:171:34
+      2    0.0%    0.0%  LazyCompile: *padWithZeros /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:3:22
+      2    0.0%    0.0%  LazyCompile: *handleMessage internal/child_process.js:880:25
+      2    0.0%    0.0%  LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      2    0.0%    0.0%  LazyCompile: *emit events.js:262:44
+      2    0.0%    0.0%  LazyCompile: *configForCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/categories.js:167:27
+      2    0.0%    0.0%  LazyCompile: *Primitives /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/flatted/cjs/index.js:109:22
+      2    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:567:37
+      2    0.0%    0.0%  LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      1    0.0%    0.0%  RegExp: ^xterm-256
+      1    0.0%    0.0%  RegExp: SSS
+      1    0.0%    0.0%  LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+      1    0.0%    0.0%  LazyCompile: *timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      1    0.0%    0.0%  LazyCompile: *noop /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/flatted/cjs/index.js:71:16
+      1    0.0%    0.0%  LazyCompile: *internalBinding internal/bootstrap/loaders.js:133:45
+      1    0.0%    0.0%  LazyCompile: *inspect internal/util/inspect.js:275:17
+      1    0.0%    0.0%  LazyCompile: *formatValue internal/util/inspect.js:725:21
+      1    0.0%    0.0%  LazyCompile: *formatNumber internal/util/inspect.js:1368:22
+      1    0.0%    0.0%  LazyCompile: *emit internal/child_process.js:876:16
+      1    0.0%    0.0%  LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+      1    0.0%    0.0%  LazyCompile: *colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      1    0.0%    0.0%  LazyCompile: *afterWriteTick _stream_writable.js:475:24
+      1    0.0%    0.0%  LazyCompile: *Writable.write _stream_writable.js:291:36
+      1    0.0%    0.0%  LazyCompile: *<anonymous> internal/cluster/worker.js:31:32
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/flatted/cjs/index.js:77:16
+
+ [C++]:
+   ticks  total  nonlib   name
+   9721   75.9%   76.3%  T _fcntl$NOCANCEL
+   1046    8.2%    8.2%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+    544    4.2%    4.3%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    263    2.1%    2.1%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    118    0.9%    0.9%  T _mach_msg_send
+    100    0.8%    0.8%  T _fstatfs64
+     78    0.6%    0.6%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     61    0.5%    0.5%  T void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     60    0.5%    0.5%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     57    0.4%    0.4%  T _proc_pidpath
+     55    0.4%    0.4%  T _proc_set_dirty
+     47    0.4%    0.4%  T __kernelrpc_vm_remap
+     32    0.2%    0.3%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     23    0.2%    0.2%  T _getxattr
+     19    0.1%    0.1%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    0.1%    0.1%  t __malloc_initialize
+     19    0.1%    0.1%  T ___sysctl
+     16    0.1%    0.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     15    0.1%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+     13    0.1%    0.1%  t node::(anonymous namespace)::ProcessWrap::Spawn(v8::FunctionCallbackInfo<v8::Value> const&)
+     13    0.1%    0.1%  t _tiny_malloc_should_clear
+     13    0.1%    0.1%  T _task_get_special_port
+     12    0.1%    0.1%  T ___getdirentries64
+     10    0.1%    0.1%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.1%    0.1%  T ___pthread_init
+      8    0.1%    0.1%  T node::StreamBase::CallJSOnreadMethod(long, v8::Local<v8::ArrayBuffer>, unsigned long, node::StreamBase::StreamBaseJSChecks)
+      8    0.1%    0.1%  T _mmap
+      7    0.1%    0.1%  T node::TCPWrap::Instantiate(node::Environment*, node::AsyncWrap*, node::TCPWrap::SocketType)
+      7    0.1%    0.1%  T __ZN4node6crypto13SecureContext4InitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      5    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.0%    0.0%  T _realloc
+      5    0.0%    0.0%  T _mach_msg_overwrite
+      4    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb0EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      4    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  T __ZN4node7TLSWrap5StartERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.0%    0.0%  t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t ___vfprintf
+      3    0.0%    0.0%  t __ZN2v88internalL26Builtin_Impl_HandleApiCallENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      3    0.0%    0.0%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+      3    0.0%    0.0%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      3    0.0%    0.0%  T node::HandleWrap::HandleWrap(node::Environment*, v8::Local<v8::Object>, uv_handle_s*, node::AsyncWrap::ProviderType)
+      3    0.0%    0.0%  T node::Environment::RunAndClearNativeImmediates(bool)
+      3    0.0%    0.0%  T node::EmitToJSStreamListener::OnStreamRead(long, uv_buf_t const&)
+      3    0.0%    0.0%  T node::ConnectionWrap<node::TCPWrap, uv_tcp_s>::OnConnection(uv_stream_s*, int)
+      3    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      3    0.0%    0.0%  T __ZN4node6crypto6PBKDF2ERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.0%    0.0%  T __ZN2v87Context5EnterEv
+      3    0.0%    0.0%  T __ZN2v87Context29GetNumberOfEmbedderDataFieldsEv
+      3    0.0%    0.0%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+      2    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.0%    0.0%  t node::util::SetHiddenValue(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::SimpleWriteWrap<node::AsyncWrap>::GetAsyncWrap()
+      2    0.0%    0.0%  t node::Cwd(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t _tiny_try_realloc_in_place
+      2    0.0%    0.0%  t _tiny_malloc_from_free_list
+      2    0.0%    0.0%  t _small_malloc_should_clear
+      2    0.0%    0.0%  t _loadCat
+      2    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      2    0.0%    0.0%  t __ZN2v88internal14LookupIterator17PropertyOrElementEPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEENS1_13ConfigurationE
+      2    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb1EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      2    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb0EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      2    0.0%    0.0%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::StreamBase::GetObject()
+      2    0.0%    0.0%  T node::InternalCallbackScope::Close()
+      2    0.0%    0.0%  T node::Environment::Reallocate(char*, unsigned long, unsigned long)
+      2    0.0%    0.0%  T _thread_resume
+      2    0.0%    0.0%  T _getsourcefilter
+      2    0.0%    0.0%  T _freopen
+      2    0.0%    0.0%  T _cosh$fenv_access_off
+      2    0.0%    0.0%  T __kernelrpc_mach_port_construct_trap
+      2    0.0%    0.0%  T __ZNK2v88internal4Call11GetCallTypeEv
+      2    0.0%    0.0%  T __ZN4node7TLSWrap4WrapERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node6crypto19GetRootCertificatesERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal9Accessors17ArrayLengthGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal25FunctionCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectENS0_10HeapObjectES4_S5_Pmi
+      2    0.0%    0.0%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+      2    0.0%    0.0%  T __ZN2v87Context4ExitEv
+      2    0.0%    0.0%  T __ZN2v82V818GlobalizeReferenceEPNS_8internal7IsolateEPm
+      1    0.0%    0.0%  t unsigned long std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::__erase_unique<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.0%    0.0%  t std::__1::locale::__imp::__imp(unsigned long)
+      1    0.0%    0.0%  t std::__1::__stdinbuf<wchar_t>::__stdinbuf(__sFILE*, __mbstate_t*)
+      1    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<node::CleanupHookCallback, void*>*> std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::find<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t node::util::GetOwnNonIndexProperties(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::os::GetCPUInfo(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FillGlobalStatsArray(node::Environment*, bool, uv_stat_t const*, bool)
+      1    0.0%    0.0%  t node::LibuvStreamWrap::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)::$_0::__invoke(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::Environment::AddCleanupHook(void (*)(void*), void*)
+      1    0.0%    0.0%  t node::EnvQuery(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Integer> const&)
+      1    0.0%    0.0%  t node::AsyncHooks::push_async_context(double, double, v8::Local<v8::Object>)
+      1    0.0%    0.0%  t node::AsyncHooks::pop_async_context(double)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)
+      1    0.0%    0.0%  t _szone_realloc
+      1    0.0%    0.0%  t _szone_malloc_should_clear
+      1    0.0%    0.0%  t _rack_init
+      1    0.0%    0.0%  t _nano_common_configure
+      1    0.0%    0.0%  t _malloc_print_configure
+      1    0.0%    0.0%  t _free_tiny
+      1    0.0%    0.0%  t _default_zone_calloc
+      1    0.0%    0.0%  t _create_scalable_szone
+      1    0.0%    0.0%  t __pthread_mutex_check_init_slow
+      1    0.0%    0.0%  t ___part_load_locale
+      1    0.0%    0.0%  t ___find_warguments
+      1    0.0%    0.0%  t __ZN2v88internal6Object11GetPropertyEPNS0_7IsolateENS0_6HandleIS1_EENS4_INS0_4NameEEE
+      1    0.0%    0.0%  t __ZN2v88internal22HandleScopeImplementer12EnterContextENS0_7ContextE
+      1    0.0%    0.0%  t __ZN2v88internal17PrototypeIterator7AdvanceEv
+      1    0.0%    0.0%  t __ZN2v88internal14LookupIterator17PropertyOrElementEPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEENS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_124ProbeInstantiationsCacheEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEEiNS1_11CachingModeE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_121CollectElementIndicesEPNS0_7IsolateENS0_6HandleINS0_8JSObjectEEEjPNSt3__16vectorIjNS7_9allocatorIjEEEE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119InstantiateFunctionEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEENS4_INS0_20FunctionTemplateInfoEEENS0_11MaybeHandleINS0_4NameEEE
+      1    0.0%    0.0%  t __ZN2v84base19TemplateHashMapImplIPvS2_NS0_26HashEqualityThenKeyMatcherIS2_PFbS2_S2_EEENS_8internal20ZoneAllocationPolicyEE14LookupOrInsertIZNS9_14LookupOrInsertERKS2_jS8_EUlvE_EEPNS0_20TemplateHashMapEntryIS2_S2_EESC_jRKT_S8_
+      1    0.0%    0.0%  t __ZN2v84base19TemplateHashMapImplIPvS2_NS0_26HashEqualityThenKeyMatcherIS2_PFbS2_S2_EEENS0_23DefaultAllocationPolicyEE14LookupOrInsertIZNS8_14LookupOrInsertERKS2_jS7_EUlvE_EEPNS0_20TemplateHashMapEntryIS2_S2_EESB_jRKT_S7_
+      1    0.0%    0.0%  T void node::StreamBase::JSMethod<&(node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, unsigned long long) const
+      1    0.0%    0.0%  T std::__1::ios_base::Init::Init()
+      1    0.0%    0.0%  T std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::flush()
+      1    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::IsAlive()
+      1    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::GetAsyncWrap()
+      1    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      1    0.0%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.0%    0.0%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::i18n::ConverterObject::Decode(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::i18n::ConverterObject::Create(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::TCPWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::ReportWritesToJSStreamListener::OnStreamAfterReqFinished(node::StreamReq*, int)
+      1    0.0%    0.0%  T node::NodePlatform::MonotonicallyIncreasingTime()
+      1    0.0%    0.0%  T node::NodePlatform::CurrentClockTimeMillis()
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  T node::LibuvStreamWrap::OnUvRead(long, uv_buf_t const*)
+      1    0.0%    0.0%  T node::LibuvStreamWrap::AfterUvWrite(uv_write_s*, int)
+      1    0.0%    0.0%  T node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      1    0.0%    0.0%  T node::HandleWrap::Ref(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::HandleWrap::OnClose(uv_handle_s*)
+      1    0.0%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::Environment::RunAndClearInterrupts()
+      1    0.0%    0.0%  T node::Buffer::Data(v8::Local<v8::Value>)
+      1    0.0%    0.0%  T node::AsyncWrap::IsDoneInitializing() const
+      1    0.0%    0.0%  T node::AsyncWrap::AsyncWrap(node::Environment*, v8::Local<v8::Object>, node::AsyncWrap::ProviderType, double)
+      1    0.0%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.0%    0.0%  T int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T _vm_region_64
+      1    0.0%    0.0%  T _tempnam
+      1    0.0%    0.0%  T _semaphore_create
+      1    0.0%    0.0%  T _malloc_zone_from_ptr
+      1    0.0%    0.0%  T _malloc_zone_calloc
+      1    0.0%    0.0%  T _malloc_set_zone_name
+      1    0.0%    0.0%  T _getpriority
+      1    0.0%    0.0%  T _fscanf
+      1    0.0%    0.0%  T __pthread_exit_if_canceled
+      1    0.0%    0.0%  T __fseeko
+      1    0.0%    0.0%  T __ZNK2v85Value17IsArgumentsObjectEv
+      1    0.0%    0.0%  T __ZN4node6crypto7SSLWrapINS_7TLSWrapEE18GetPeerCertificateERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6crypto4Hmac3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6crypto11RandomBytesERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v88internal9Accessors23FunctionPrototypeGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v88internal7AstNode20AsIterationStatementEv
+      1    0.0%    0.0%  T __ZN2v88internal5Scope6LookupILNS1_15ScopeLookupModeE0EEEPNS0_8VariableEPNS0_13VariableProxyEPS1_S8_S8_b
+      1    0.0%    0.0%  T __ZN2v88internal5Scope25AllocateNonParameterLocalEPNS0_8VariableE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope18AsDeclarationScopeEv
+      1    0.0%    0.0%  T __ZN2v88internal5Scope17LookupInScopeInfoEPKNS0_12AstRawStringEPS1_
+      1    0.0%    0.0%  T __ZN2v88internal16DeclarationScope7AnalyzeEPNS0_9ParseInfoE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory9GetStringEjbNS0_6VectorIKhEE
+      1    0.0%    0.0%  T __ZN2v88internal12AstRawString7CompareEPvS2_
+      1    0.0%    0.0%  T __ZN2v88internal10ApiNatives19InstantiateFunctionENS0_6HandleINS0_20FunctionTemplateInfoEEENS0_11MaybeHandleINS0_4NameEEE
+      1    0.0%    0.0%  T __ZN2v88internal10ApiNatives17InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEE
+      1    0.0%    0.0%  T __ZN2v88TryCatchD2Ev
+      1    0.0%    0.0%  T __ZN2v87Integer3NewEPNS_7IsolateEi
+      1    0.0%    0.0%  T __ZN2v86String11NewFromUtf8EPNS_7IsolateEPKcNS_13NewStringTypeEi
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+      1    0.0%    0.0%  T __ZN2v86Object3NewEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v820EscapableHandleScopeC2EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v816FunctionTemplate11GetFunctionENS_5LocalINS_7ContextEEE
+
+ [Summary]:
+   ticks  total  nonlib   name
+    103    0.8%    0.8%  JavaScript
+  12627   98.6%   99.1%  C++
+    253    2.0%    2.0%  GC
+     69    0.5%          Shared libraries
+     11    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1173   49.1%    9.2%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+   1034   43.3%    8.1%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+    118    4.9%    0.9%  T _mach_msg_send
+     15    0.6%    0.1%  T _proc_pidpath
+     12    0.5%    0.1%  T _task_get_special_port
+      8    0.3%    0.1%  T _mmap
+      3    0.1%    0.0%  t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.1%    0.0%  T void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.0%  T __kernelrpc_mach_port_construct_trap
+      2    0.1%    0.0%  T __ZN2v88internal19Builtin_ArrayConcatEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  t std::__1::__stdinbuf<wchar_t>::__stdinbuf(__sFILE*, __mbstate_t*)
+      1    0.0%    0.0%  t node::util::GetOwnNonIndexProperties(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FillGlobalStatsArray(node::Environment*, bool, uv_stat_t const*, bool)
+      1    0.0%    0.0%  t node::SimpleWriteWrap<node::AsyncWrap>::GetAsyncWrap()
+      1    0.0%    0.0%  t node::(anonymous namespace)::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)
+      1    0.0%    0.0%  t _create_scalable_szone
+      1    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::IsAlive()
+      1    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      1    0.0%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  T node::Buffer::Data(v8::Local<v8::Value>)
+      1    0.0%    0.0%  T node::AsyncWrap::IsDoneInitializing() const
+      1    0.0%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.0%    0.0%  T int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T __ZNK2v85Value17IsArgumentsObjectEv
+      1    0.0%    0.0%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+      1    0.0%    0.0%  T __ZN2v86String11NewFromUtf8EPNS_7IsolateEPKcNS_13NewStringTypeEi
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   9721   75.9%  T _fcntl$NOCANCEL
+
+   1046    8.2%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+    468   44.7%    T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     47   10.0%      T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     12   25.5%        LazyCompile: *parseChannelMessages internal/child_process/serialization.js:96:24
+     12  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     12  100.0%            LazyCompile: *channel.onread internal/child_process.js:557:28
+      3    6.4%        LazyCompile: *channel.onread internal/child_process.js:557:28
+      2    4.3%        LazyCompile: ~stat internal/modules/cjs/loader.js:123:14
+      1   50.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      1   50.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2    4.3%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      2    4.3%        LazyCompile: *emit internal/child_process.js:876:16
+      2  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      2    4.3%        LazyCompile: *colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      2  100.0%          LazyCompile: *receiver /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:28:18
+      2  100.0%            LazyCompile: *emit events.js:262:44
+      2    4.3%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/flatted/cjs/index.js:77:16
+      1   50.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1  100.0%            LazyCompile: *emit events.js:262:44
+      1   50.0%          LazyCompile: *receiver /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:28:18
+      1  100.0%            LazyCompile: *emit events.js:262:44
+      1    2.1%        T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    2.1%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:899:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    2.1%        LazyCompile: ~translatePeerCertificate _tls_common.js:311:69
+      1  100.0%          LazyCompile: ~translatePeerCertificate _tls_common.js:311:69
+      1  100.0%            LazyCompile: ~TLSSocket.getPeerCertificate _tls_wrap.js:977:50
+      1    2.1%        LazyCompile: ~setToArray /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:1261:22
+      1  100.0%          Eval: ~runInContext /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:1448:44
+      1  100.0%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:9:11
+      1    2.1%        LazyCompile: ~realpathSync fs.js:1568:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1    2.1%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    2.1%        LazyCompile: ~pathtoRegexp /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          LazyCompile: ~Layer /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            LazyCompile: ~Layer /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:33:15
+      1    2.1%        LazyCompile: ~parseOpts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    2.1%        LazyCompile: ~module.exports.get_napi_build_versions_raw /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:140:54
+      1  100.0%          LazyCompile: ~module.exports.validate_package_json /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:46:48
+      1  100.0%            LazyCompile: ~validate_config /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1    2.1%        LazyCompile: ~getValidStdio internal/child_process.js:904:23
+      1  100.0%          LazyCompile: ~ChildProcess.spawn internal/child_process.js:334:40
+      1  100.0%            LazyCompile: ~spawn child_process.js:546:15
+      1    2.1%        LazyCompile: ~getUriReadPreference /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/processConnectionOptions.js:42:30
+      1  100.0%          LazyCompile: ~processConnectionOptions /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/processConnectionOptions.js:6:34
+      1  100.0%            LazyCompile: ~Connection.openUri /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/connection.js:676:40
+      1    2.1%        LazyCompile: ~formatProperty internal/util/inspect.js:1674:24
+      1  100.0%          LazyCompile: ~formatArray internal/util/inspect.js:1493:21
+      1  100.0%            LazyCompile: ~formatRaw internal/util/inspect.js:794:19
+      1    2.1%        LazyCompile: ~emit events.js:262:44
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.1%        LazyCompile: ~compile /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/document/compile.js:23:17
+      1  100.0%          LazyCompile: ~Document.$__setSchema /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3212:43
+      1  100.0%            LazyCompile: ~compile /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/model.js:4727:33
+      1    2.1%        LazyCompile: ~Schema.path /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema.js:606:33
+      1  100.0%          LazyCompile: ~Document.$__setSchema /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3212:43
+      1  100.0%            LazyCompile: ~compile /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/model.js:4727:33
+      1    2.1%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/webidl-conversions/lib/index.js:425:11
+      1  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1  100.0%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/webidl-conversions/lib/index.js:1:1
+      1    2.1%        LazyCompile: *timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      1  100.0%          LazyCompile: ~colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+      1    2.1%        LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%          LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1    2.1%        LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1    2.1%        Eval: ~runInContext /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:1448:44
+      1  100.0%          Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:9:11
+      1  100.0%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/lodash/lodash.js:1:1
+      1    2.1%        Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/streamroller/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    2.1%        Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+     43    9.2%      LazyCompile: *receiver /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:28:18
+     43  100.0%        LazyCompile: *emit events.js:262:44
+     22   51.2%          LazyCompile: *<anonymous> internal/cluster/worker.js:31:32
+     22  100.0%            LazyCompile: *emit internal/child_process.js:876:16
+     21   48.8%          LazyCompile: *emit events.js:262:44
+     20   95.2%            LazyCompile: *emit events.js:262:44
+      1    4.8%            LazyCompile: *emit internal/child_process.js:876:16
+     34    7.3%      LazyCompile: *parseChannelMessages internal/child_process/serialization.js:96:24
+     34  100.0%        T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     34  100.0%          LazyCompile: *channel.onread internal/child_process.js:557:28
+     31    6.6%      LazyCompile: *emit events.js:262:44
+     31  100.0%        LazyCompile: *emit events.js:262:44
+     31  100.0%          LazyCompile: *emit events.js:262:44
+     31  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     14    3.0%      LazyCompile: *nextTick internal/process/task_queues.js:105:18
+      8   57.1%        LazyCompile: *channel.onread internal/child_process.js:557:28
+      3   21.4%        LazyCompile: ~value internal/console/constructor.js:243:20
+      3  100.0%          LazyCompile: ~log internal/console/constructor.js:342:6
+      3  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    7.1%        LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+      1  100.0%          LazyCompile: *log internal/console/constructor.js:342:6
+      1  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    7.1%        LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+      1  100.0%          LazyCompile: *log internal/console/constructor.js:342:6
+      1  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    7.1%        LazyCompile: *Writable.write _stream_writable.js:291:36
+      1  100.0%          LazyCompile: ~value internal/console/constructor.js:243:20
+      1  100.0%            LazyCompile: ~log internal/console/constructor.js:342:6
+     13    2.8%      LazyCompile: *realpathSync fs.js:1568:22
+      8   61.5%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      8  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      8  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      5   38.5%        LazyCompile: *tryExtensions internal/modules/cjs/loader.js:342:23
+      4   80.0%          LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      4  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1   20.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:279:20
+      1  100.0%            LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      8    1.7%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      8  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      8  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/api/v2010/account/usage/record/allTime.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/api/v2010/account/conference/participant.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema/array.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/model.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/map_reduce.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/finalhandler/index.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/utils.js:1:1
+      1   12.5%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/application.js:1:1
+      8    1.7%      LazyCompile: *target._send internal/child_process.js:689:26
+      8  100.0%        LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+      8    1.7%      LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      7   87.5%        LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      7  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      4   57.1%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      3   42.9%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1   12.5%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: *Module.require internal/modules/cjs/loader.js:879:36
+      8    1.7%      LazyCompile: *handleMessage internal/child_process.js:880:25
+      8  100.0%        LazyCompile: *channel.onread internal/child_process.js:557:28
+      8    1.7%      LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      4   50.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      3   75.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1   25.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      4   50.0%        LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      4  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      4  100.0%            LazyCompile: *Module.require internal/modules/cjs/loader.js:879:36
+      7    1.5%      LazyCompile: ~getOptions internal/fs/utils.js:245:20
+      7  100.0%        LazyCompile: ~readFileSync fs.js:361:22
+      7  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      5   71.4%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      2   28.6%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      6    1.3%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1032:39
+      6  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      6  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      6  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      6    1.3%      LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+      5    1.1%      LazyCompile: ~deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+      5  100.0%        LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      5  100.0%          LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/bson.js:156:21
+      4   80.0%            LazyCompile: ~messageHandler /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1   20.0%            LazyCompile: ~parse /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/commands.js:384:10
+      5    1.1%      LazyCompile: *readPackage internal/modules/cjs/loader.js:231:21
+      2   40.0%        LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      2  100.0%            LazyCompile: *Module.require internal/modules/cjs/loader.js:879:36
+      2   40.0%        LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      2  100.0%          LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1   20.0%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      1  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      5    1.1%      LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      3   60.0%        LazyCompile: *Module.require internal/modules/cjs/loader.js:879:36
+      3  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1   33.3%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/video/v1/room.js:1:1
+      1   33.3%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/serverless/v1/service.js:1:1
+      1   33.3%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/Wireless.js:1:1
+      2   40.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      2  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1   50.0%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/messaging/V1.js:1:1
+      1   50.0%            Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/twilio/lib/rest/conversations/v1/configuration.js:1:1
+     15    1.4%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      8   53.3%      Eval: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/long.js:1:1
+      8  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      8  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      8  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      2   13.3%      LazyCompile: ~value internal/console/constructor.js:243:20
+      2  100.0%        LazyCompile: ~log internal/console/constructor.js:342:6
+      2  100.0%          t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+      2   13.3%      LazyCompile: ~unref internal/child_process.js:522:8
+      2  100.0%        LazyCompile: ~req.oncomplete internal/child_process.js:792:26
+      2   13.3%      LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+      2  100.0%        LazyCompile: *log internal/console/constructor.js:342:6
+      2  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      2  100.0%            LazyCompile: *receiver /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:28:18
+      1    6.7%      LazyCompile: *target._send internal/child_process.js:689:26
+      1  100.0%        LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+     12    1.1%    LazyCompile: ~value internal/console/constructor.js:243:20
+     12  100.0%      LazyCompile: ~log internal/console/constructor.js:342:6
+     12  100.0%        t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     12  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+     12  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/log4js.js:41:29
+     12    1.1%    LazyCompile: *target._send internal/child_process.js:689:26
+     12  100.0%      LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+     12    1.1%    LazyCompile: *handle.onconnection internal/cluster/round_robin_handle.js:39:32
+     12    1.1%    LazyCompile: *channel.onread internal/child_process.js:557:28
+     11    1.1%    LazyCompile: ~readFileSync fs.js:361:22
+     11  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      6   54.5%        LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      6  100.0%          LazyCompile: *Module.require internal/modules/cjs/loader.js:879:36
+      6  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      5   45.5%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      5  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      5  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+     11    1.1%    LazyCompile: *formatRaw internal/util/inspect.js:794:19
+     11  100.0%      LazyCompile: *formatValue internal/util/inspect.js:725:21
+      7   63.6%        RegExp: ^xterm-256
+      7  100.0%          LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      7  100.0%            LazyCompile: *formatValue internal/util/inspect.js:725:21
+      4   36.4%        LazyCompile: *inspect internal/util/inspect.js:275:17
+      4  100.0%          LazyCompile: *formatWithOptions internal/util/inspect.js:1876:27
+      3   75.0%            LazyCompile: *format internal/util/inspect.js:1818:16
+      1   25.0%            LazyCompile: ~format internal/util/inspect.js:1818:16
+
+    544    4.2%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    544  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    544  100.0%      LazyCompile: ~readSync fs.js:536:18
+    544  100.0%        LazyCompile: ~tryReadSync fs.js:349:21
+    544  100.0%          LazyCompile: ~readFileSync fs.js:361:22
+    542   99.6%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+
+    263    2.1%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    263  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    263  100.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:899:18
+    263  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+    263  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+    138   52.5%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+    125   47.5%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+

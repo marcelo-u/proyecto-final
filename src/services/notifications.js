@@ -1,3 +1,7 @@
+const logger = require("../utils/logger");
+const log = logger.getLogger("default");
+const logFile = logger.getLogger("file");
+
 const nodemailer = require("nodemailer");
 const moment = require("moment");
 const {
@@ -12,20 +16,23 @@ const twilioClient = require("twilio")(ACCOUNT_TWILIO_SID, TWILIO_AUTH_TOKEN);
 
 module.exports = class {
   async sendMail(to, subject, content) {
+    log.info("Sending email to", to);
     try {
       //registra si la acción viene de log-in o log-out y usa el nombre de usuario
       await sendFromGmail(to, subject, content);
-      //solo dispara el mail de gmail si la cuenta es proveniente de facebook
     } catch (error) {
-      console.log("test" + error);
+      log.error("ERROR");
+      logFile.error("ERROR:", error);
     }
   }
 
   async sendWhatsapp(to, message) {
+    log.info("Sending whatsapp message to", to);
     try {
       sendFromTwilio(to, message);
     } catch (error) {
-      //loguea en caso de que falle
+      log.error("ERROR");
+      logFile.error("ERROR:", error);
     }
   }
 };

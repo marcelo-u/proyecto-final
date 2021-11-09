@@ -5,6 +5,7 @@ const {
   updateProduct,
   deleteProduct,
 } = require("../controllers/product");
+const { verifyToken } = require("../middlewares/tokenVerifier");
 
 const adminRequired = (req, res, next) => {
   req.app.get("admin")
@@ -15,9 +16,9 @@ const adminRequired = (req, res, next) => {
       });
 };
 
-router.get("/listar/:id?", listProducts);
-router.post("/agregar", adminRequired, addProduct);
-router.put("/actualizar/:id", adminRequired, updateProduct);
-router.delete("/borrar/:id", adminRequired, deleteProduct);
+router.get("/listar/:id?", verifyToken, listProducts);
+router.post("/agregar", verifyToken, adminRequired, addProduct);
+router.put("/actualizar/:id", verifyToken, adminRequired, updateProduct);
+router.delete("/borrar/:id", verifyToken, adminRequired, deleteProduct);
 
 module.exports = router;

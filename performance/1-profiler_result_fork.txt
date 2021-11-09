@@ -1,0 +1,1157 @@
+Statistical profiling result from isolate-0x102d7a000-7657-v8.log, (18987 ticks, 40 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     80    0.4%          /usr/lib/system/libsystem_platform.dylib
+     52    0.3%          /usr/lib/system/libsystem_kernel.dylib
+     16    0.1%          /usr/lib/system/libsystem_pthread.dylib
+     16    0.1%          /usr/lib/system/libsystem_malloc.dylib
+      7    0.0%          /usr/lib/libc++abi.dylib
+      2    0.0%          /usr/lib/libc++.1.dylib
+      1    0.0%          /usr/lib/system/libsystem_m.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     30    0.2%    0.2%  LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+     27    0.1%    0.1%  LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+     25    0.1%    0.1%  LazyCompile: *onwrite _stream_writable.js:431:17
+     18    0.1%    0.1%  LazyCompile: *normalizeString path.js:52:25
+     18    0.1%    0.1%  LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+     18    0.1%    0.1%  LazyCompile: *Document.get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:1699:34
+     15    0.1%    0.1%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     15    0.1%    0.1%  LazyCompile: *Document /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:75:18
+     13    0.1%    0.1%  LazyCompile: *serializeInto /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/serializer.js:549:23
+     13    0.1%    0.1%  LazyCompile: *nextTick internal/process/task_queues.js:105:18
+     13    0.1%    0.1%  LazyCompile: *_init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:765:17
+     13    0.1%    0.1%  LazyCompile: *ObjectId /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/objectid.js:22:22
+     12    0.1%    0.1%  LazyCompile: *get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/get.js:8:30
+     12    0.1%    0.1%  LazyCompile: *formatWithOptions internal/util/inspect.js:1876:27
+     12    0.1%    0.1%  LazyCompile: *emit events.js:262:44
+     12    0.1%    0.1%  LazyCompile: *_addListener events.js:342:22
+     11    0.1%    0.1%  LazyCompile: *onStreamRead internal/stream_base_commons.js:165:22
+     11    0.1%    0.1%  LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+     10    0.1%    0.1%  LazyCompile: *Writable.write _stream_writable.js:291:36
+     10    0.1%    0.1%  LazyCompile: *Schema.path /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema.js:606:33
+     10    0.1%    0.1%  LazyCompile: *Readable.read _stream_readable.js:378:35
+      9    0.0%    0.0%  LazyCompile: *stringToParts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mpath/lib/stringToParts.js:3:40
+      9    0.0%    0.0%  LazyCompile: *processTimers internal/timers.js:482:25
+      7    0.0%    0.0%  LazyCompile: *resolve path.js:973:10
+      7    0.0%    0.0%  LazyCompile: *hidden internal/errors.js:282:25
+      7    0.0%    0.0%  LazyCompile: *asString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:33:18
+      7    0.0%    0.0%  LazyCompile: *Socket net.js:267:16
+      7    0.0%    0.0%  LazyCompile: *$__applyDefaults /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:410:26
+      6    0.0%    0.0%  LazyCompile: *removeListener events.js:450:28
+      6    0.0%    0.0%  LazyCompile: *readableAddChunk _stream_readable.js:221:26
+      6    0.0%    0.0%  LazyCompile: *processPromiseRejections internal/process/promises.js:171:34
+      6    0.0%    0.0%  LazyCompile: *get _stream_duplex.js:76:8
+      6    0.0%    0.0%  LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      5    0.0%    0.0%  LazyCompile: *readPackage internal/modules/cjs/loader.js:231:21
+      5    0.0%    0.0%  LazyCompile: *onceWrapper events.js:415:21
+      5    0.0%    0.0%  LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:428:14
+      5    0.0%    0.0%  LazyCompile: *get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/document/compile.js:170:20
+      5    0.0%    0.0%  LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      5    0.0%    0.0%  LazyCompile: *exports.hasUserDefinedProperty /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/utils.js:717:42
+      5    0.0%    0.0%  LazyCompile: *completeMany /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      5    0.0%    0.0%  LazyCompile: *clearBuffer _stream_writable.js:497:21
+      5    0.0%    0.0%  LazyCompile: *Socket._writeGeneric net.js:761:42
+      5    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      4    0.0%    0.0%  RegExp: \.\d+
+      4    0.0%    0.0%  RegExp: [:/?#\[\]@]
+      4    0.0%    0.0%  LazyCompile: *value internal/console/constructor.js:243:20
+      4    0.0%    0.0%  LazyCompile: *set maxAge /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/cookie.js:83:13
+      4    0.0%    0.0%  LazyCompile: *session /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:179:26
+      4    0.0%    0.0%  LazyCompile: *serialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/node_modules/cookie/index.js:101:19
+      4    0.0%    0.0%  LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+      4    0.0%    0.0%  LazyCompile: *processWaitQueue /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/topology.js:628:26
+      4    0.0%    0.0%  LazyCompile: *processWaitQueue /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:417:26
+      4    0.0%    0.0%  LazyCompile: *listOnTimeout internal/timers.js:502:25
+      4    0.0%    0.0%  LazyCompile: *insert internal/timers.js:345:16
+      4    0.0%    0.0%  LazyCompile: *getHeader _http_outgoing.js:543:57
+      4    0.0%    0.0%  LazyCompile: *getAllProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/services/products.js:8:23
+      4    0.0%    0.0%  LazyCompile: *format /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/content-type/index.js:65:17
+      4    0.0%    0.0%  LazyCompile: *connectionListenerInternal _http_server.js:401:36
+      4    0.0%    0.0%  LazyCompile: *concat buffer.js:545:32
+      4    0.0%    0.0%  LazyCompile: *cleanupCursor /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:509:23
+      4    0.0%    0.0%  LazyCompile: *_storeHeader _http_outgoing.js:342:22
+      4    0.0%    0.0%  LazyCompile: *_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+      4    0.0%    0.0%  LazyCompile: *_copy buffer.js:205:15
+      4    0.0%    0.0%  LazyCompile: *VirtualType.applyGetters /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/virtualtype.js:141:46
+      3    0.0%    0.0%  RegExp: y{1,4}
+      3    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      3    0.0%    0.0%  RegExp: [\x00-\x1f\x27\x5c]
+      3    0.0%    0.0%  LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+      3    0.0%    0.0%  LazyCompile: *write /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:488:15
+      3    0.0%    0.0%  LazyCompile: *unenroll timers.js:76:18
+      3    0.0%    0.0%  LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      3    0.0%    0.0%  LazyCompile: *setHeader _http_outgoing.js:528:57
+      3    0.0%    0.0%  LazyCompile: *resume_ _stream_readable.js:980:17
+      3    0.0%    0.0%  LazyCompile: *resOnFinish _http_server.js:671:21
+      3    0.0%    0.0%  LazyCompile: *onconnection net.js:1529:22
+      3    0.0%    0.0%  LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      3    0.0%    0.0%  LazyCompile: *end _http_outgoing.js:738:45
+      3    0.0%    0.0%  LazyCompile: *command /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:133:12
+      3    0.0%    0.0%  LazyCompile: *command /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:161:12
+      3    0.0%    0.0%  LazyCompile: *applyPaths /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:5040:50
+      3    0.0%    0.0%  LazyCompile: *afterWriteTick _stream_writable.js:475:24
+      3    0.0%    0.0%  LazyCompile: *Timestamp /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/timestamp.js:26:23
+      3    0.0%    0.0%  LazyCompile: *Query /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:65:15
+      3    0.0%    0.0%  LazyCompile: *Document.populated /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:4128:40
+      3    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/connect.js:61:28
+      2    0.0%    0.0%  RegExp: ^[\u0009\u0020-\u007e\u0080-\u00ff]+$
+      2    0.0%    0.0%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      2    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      2    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      2    0.0%    0.0%  LazyCompile: *write_ _http_outgoing.js:639:16
+      2    0.0%    0.0%  LazyCompile: *write buffer.js:1039:40
+      2    0.0%    0.0%  LazyCompile: *undestroy internal/streams/destroy.js:72:19
+      2    0.0%    0.0%  LazyCompile: *slice buffer.js:667:12
+      2    0.0%    0.0%  LazyCompile: *size /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/denque/index.js:94:38
+      2    0.0%    0.0%  LazyCompile: *serializeString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/serializer.js:19:25
+      2    0.0%    0.0%  LazyCompile: *resolveBSONOptions /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/bson.js:52:28
+      2    0.0%    0.0%  LazyCompile: *requiredPaths /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema.js:1081:56
+      2    0.0%    0.0%  LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      2    0.0%    0.0%  LazyCompile: *pushAsyncContext internal/async_hooks.js:435:26
+      2    0.0%    0.0%  LazyCompile: *handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:136:31
+      2    0.0%    0.0%  LazyCompile: *getEncodingOps buffer.js:676:24
+      2    0.0%    0.0%  LazyCompile: *getColorDepth internal/tty.js:102:23
+      2    0.0%    0.0%  LazyCompile: *get data /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/cookie.js:117:11
+      2    0.0%    0.0%  LazyCompile: *get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/node_modules/debug/src/common.js:125:9
+      2    0.0%    0.0%  LazyCompile: *generate /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:363:22
+      2    0.0%    0.0%  LazyCompile: *fromStringFast buffer.js:422:24
+      2    0.0%    0.0%  LazyCompile: *exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+      2    0.0%    0.0%  LazyCompile: *executeWithServerSelection /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/execute_operation.js:65:36
+      2    0.0%    0.0%  LazyCompile: *execute /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/find.js:31:12
+      2    0.0%    0.0%  LazyCompile: *dirname path.js:1127:10
+      2    0.0%    0.0%  LazyCompile: *debug /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/debug/src/debug.js:65:17
+      2    0.0%    0.0%  LazyCompile: *configForCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/categories.js:167:27
+      2    0.0%    0.0%  LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mquery/lib/utils.js:20:45
+      2    0.0%    0.0%  LazyCompile: *app.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/application.js:473:25
+      2    0.0%    0.0%  LazyCompile: *alloc buffer.js:369:30
+      2    0.0%    0.0%  LazyCompile: *adjustOffset buffer.js:1087:22
+      2    0.0%    0.0%  LazyCompile: *_unrefTimer net.js:393:52
+      2    0.0%    0.0%  LazyCompile: *_flushOutput _http_outgoing.js:848:63
+      2    0.0%    0.0%  LazyCompile: *Socket.resume net.js:611:35
+      2    0.0%    0.0%  LazyCompile: *SchemaString.cast /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema/string.js:582:39
+      2    0.0%    0.0%  LazyCompile: *Readable.on _stream_readable.js:872:33
+      2    0.0%    0.0%  LazyCompile: *ObjectId.toHexString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/objectid.js:101:47
+      2    0.0%    0.0%  LazyCompile: *ObjectId.generate /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/objectid.js:125:34
+      2    0.0%    0.0%  LazyCompile: *ObjectId.cast /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema/objectid.js:224:35
+      2    0.0%    0.0%  LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      2    0.0%    0.0%  LazyCompile: *Long.equals /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/long.js:427:38
+      2    0.0%    0.0%  LazyCompile: *Long.add /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/long.js:252:35
+      2    0.0%    0.0%  LazyCompile: *Hash internal/crypto/hash.js:39:14
+      2    0.0%    0.0%  LazyCompile: *EventEmitter.init events.js:129:29
+      2    0.0%    0.0%  LazyCompile: *Document.$__buildDoc /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:600:42
+      2    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/execute_operation.js:16:43
+      2    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/execute_operation.js:131:67
+      1    0.0%    0.0%  RegExp: ^\$ref$|^\$id$|^\$db$
+      1    0.0%    0.0%  RegExp: ^[a-zA-Z_][a-zA-Z_0-9]*$
+      1    0.0%    0.0%  RegExp: SSS
+      1    0.0%    0.0%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.0%  RegExp: (\\\/)?(\\\.)?:(\w+)(\(.*?\))?(\*)?(\?)?
+      1    0.0%    0.0%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.0%  LazyCompile: *writevGeneric internal/stream_base_commons.js:118:23
+      1    0.0%    0.0%  LazyCompile: *write buffer.js:604:12
+      1    0.0%    0.0%  LazyCompile: *withConnection /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:249:19
+      1    0.0%    0.0%  LazyCompile: *tryReadStart net.js:568:22
+      1    0.0%    0.0%  LazyCompile: *tryExtensions internal/modules/cjs/loader.js:342:23
+      1    0.0%    0.0%  LazyCompile: *toString buffer.js:773:46
+      1    0.0%    0.0%  LazyCompile: *toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/utils.js:312:37
+      1    0.0%    0.0%  LazyCompile: *timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      1    0.0%    0.0%  LazyCompile: *slice buffer.js:605:12
+      1    0.0%    0.0%  LazyCompile: *slice buffer.js:1104:40
+      1    0.0%    0.0%  LazyCompile: *setStreamTimeout internal/stream_base_commons.js:243:26
+      1    0.0%    0.0%  LazyCompile: *serializeLong /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/serializer.js:299:23
+      1    0.0%    0.0%  LazyCompile: *serialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/bson.js:105:19
+      1    0.0%    0.0%  LazyCompile: *selectServer /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/topology.js:281:17
+      1    0.0%    0.0%  LazyCompile: *remove internal/linkedlist.js:15:16
+      1    0.0%    0.0%  LazyCompile: *reduceToSingleString internal/util/inspect.js:1758:30
+      1    0.0%    0.0%  LazyCompile: *realpathSync fs.js:1568:22
+      1    0.0%    0.0%  LazyCompile: *readInt32LE internal/buffer.js:381:21
+      1    0.0%    0.0%  LazyCompile: *read /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:981:9
+      1    0.0%    0.0%  LazyCompile: *popAsyncContext internal/async_hooks.js:449:25
+      1    0.0%    0.0%  LazyCompile: *parse /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1    0.0%    0.0%  LazyCompile: *padWithZeros /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:3:22
+      1    0.0%    0.0%  LazyCompile: *nextDocument /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:414:22
+      1    0.0%    0.0%  LazyCompile: *maybeReadMore_ _stream_readable.js:588:24
+      1    0.0%    0.0%  LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      1    0.0%    0.0%  LazyCompile: *makeFindCommand /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/find.js:73:25
+      1    0.0%    0.0%  LazyCompile: *log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:70:6
+      1    0.0%    0.0%  LazyCompile: *join internal/util.js:327:14
+      1    0.0%    0.0%  LazyCompile: *inspect internal/util/inspect.js:275:17
+      1    0.0%    0.0%  LazyCompile: *hash /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:596:14
+      1    0.0%    0.0%  LazyCompile: *hasTimedOut /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:535:16
+      1    0.0%    0.0%  LazyCompile: *hasHooks internal/async_hooks.js:370:18
+      1    0.0%    0.0%  LazyCompile: *hasAspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/operation.js:37:14
+      1    0.0%    0.0%  LazyCompile: *getUserOptions internal/util/inspect.js:222:24
+      1    0.0%    0.0%  LazyCompile: *getProperty /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/get.js:56:21
+      1    0.0%    0.0%  LazyCompile: *get net.js:1682:6
+      1    0.0%    0.0%  LazyCompile: *get maxAge /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/cookie.js:104:13
+      1    0.0%    0.0%  LazyCompile: *get loadBalanced /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:79:21
+      1    0.0%    0.0%  LazyCompile: *get description /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:68:20
+      1    0.0%    0.0%  LazyCompile: *fromArrayBuffer buffer.js:458:25
+      1    0.0%    0.0%  LazyCompile: *flow _stream_readable.js:1004:14
+      1    0.0%    0.0%  LazyCompile: *fastparse /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  LazyCompile: *exports.options /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/utils.js:210:27
+      1    0.0%    0.0%  LazyCompile: *exports.isObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mquery/lib/utils.js:275:45
+      1    0.0%    0.0%  LazyCompile: *destroy internal/streams/destroy.js:5:17
+      1    0.0%    0.0%  LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:355:36
+      1    0.0%    0.0%  LazyCompile: *debug /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/node_modules/debug/src/common.js:66:17
+      1    0.0%    0.0%  LazyCompile: *checkIn /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:148:12
+      1    0.0%    0.0%  LazyCompile: *afterWriteDispatched internal/stream_base_commons.js:151:30
+      1    0.0%    0.0%  LazyCompile: *afterWrite _stream_writable.js:480:20
+      1    0.0%    0.0%  LazyCompile: *_writeRaw _http_outgoing.js:312:19
+      1    0.0%    0.0%  LazyCompile: *Timeout internal/timers.js:162:17
+      1    0.0%    0.0%  LazyCompile: *Socket.read net.js:620:33
+      1    0.0%    0.0%  LazyCompile: *SchemaNumber.cast /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/schema/number.js:348:39
+      1    0.0%    0.0%  LazyCompile: *ReadableState _stream_readable.js:88:23
+      1    0.0%    0.0%  LazyCompile: *Query.find /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2178:32
+      1    0.0%    0.0%  LazyCompile: *Query._castConditions /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2043:43
+      1    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:567:37
+      1    0.0%    0.0%  LazyCompile: *Module._compile internal/modules/cjs/loader.js:953:37
+      1    0.0%    0.0%  LazyCompile: *Long /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/long.js:58:18
+      1    0.0%    0.0%  LazyCompile: *Kareem.execPreSync /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:111:40
+      1    0.0%    0.0%  LazyCompile: *Kareem.execPostSync /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:221:41
+      1    0.0%    0.0%  LazyCompile: *InternalCache /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/internal.js:12:23
+      1    0.0%    0.0%  LazyCompile: *FastBuffer internal/buffer.js:950:1
+      1    0.0%    0.0%  LazyCompile: *Document.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:214:45
+      1    0.0%    0.0%  LazyCompile: *Document.$__init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:702:38
+      1    0.0%    0.0%  LazyCompile: *ClientSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:54:16
+      1    0.0%    0.0%  LazyCompile: *AbstractCursor /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:46:16
+      1    0.0%    0.0%  LazyCompile: *<anonymous> internal/validators.js:84:3
+      1    0.0%    0.0%  LazyCompile: *<anonymous> internal/util/debuglog.js:70:10
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server_selection.js:157:12
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/cors/lib/index.js:219:57
+
+ [C++]:
+   ticks  total  nonlib   name
+   9053   47.7%   48.1%  T _fcntl$NOCANCEL
+   5785   30.5%   30.8%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+    497    2.6%    2.6%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    411    2.2%    2.2%  T void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+    210    1.1%    1.1%  T _mach_msg_send
+    176    0.9%    0.9%  T void node::StreamBase::JSMethod<&(node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+    130    0.7%    0.7%  T void node::StreamBase::JSMethod<&(node::StreamBase::Writev(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+    122    0.6%    0.6%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     93    0.5%    0.5%  T _proc_name
+     71    0.4%    0.4%  T _fstatfs64
+     69    0.4%    0.4%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+     58    0.3%    0.3%  T __kernelrpc_vm_remap
+     53    0.3%    0.3%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     52    0.3%    0.3%  T _getxattr
+     50    0.3%    0.3%  T _task_get_special_port
+     50    0.3%    0.3%  T __ZN4node6crypto4Hash3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     50    0.3%    0.3%  T __ZN4node6crypto11RandomBytesERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     45    0.2%    0.2%  T _proc_set_dirty
+     39    0.2%    0.2%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     36    0.2%    0.2%  t _tiny_malloc_should_clear
+     35    0.2%    0.2%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+     34    0.2%    0.2%  t __malloc_initialize
+     32    0.2%    0.2%  T ___getdirentries64
+     21    0.1%    0.1%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    0.1%    0.1%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+     18    0.1%    0.1%  T ___pthread_init
+     17    0.1%    0.1%  T _thread_get_state
+     16    0.1%    0.1%  T __ZN4node6crypto7SSLWrapINS_7TLSWrapEE18GetPeerCertificateERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+     15    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    0.1%    0.1%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.1%    0.1%  t __ZN2v88internal17PrototypeIterator7AdvanceEv
+     14    0.1%    0.1%  T __kernelrpc_mach_port_construct_trap
+     14    0.1%    0.1%  T __ZN4node6crypto4Hmac8HmacInitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     14    0.1%    0.1%  T __ZN4node6crypto4Hash10HashDigestERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     13    0.1%    0.1%  T __ZN4node6crypto4Hmac10HmacDigestERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     12    0.1%    0.1%  t _tiny_free_no_lock
+     12    0.1%    0.1%  T node::InternalCallbackScope::Close()
+     12    0.1%    0.1%  T __ZN4node6crypto4Hash10HashUpdateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     11    0.1%    0.1%  t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.1%    0.1%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+     10    0.1%    0.1%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+      9    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  t _tiny_malloc_from_free_list
+      9    0.0%    0.0%  t ___vfprintf
+      9    0.0%    0.0%  T node::TCPWrap::Instantiate(node::Environment*, node::AsyncWrap*, node::TCPWrap::SocketType)
+      9    0.0%    0.0%  T node::StreamBase::CallJSOnreadMethod(long, v8::Local<v8::ArrayBuffer>, unsigned long, node::StreamBase::StreamBaseJSChecks)
+      9    0.0%    0.0%  T __ZN2v87Context4ExitEv
+      8    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.0%    0.0%  t _tiny_free_list_add_ptr
+      8    0.0%    0.0%  t _szone_malloc_should_clear
+      8    0.0%    0.0%  t _small_malloc_should_clear
+      7    0.0%    0.0%  t node::EnvQuery(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Integer> const&)
+      7    0.0%    0.0%  t node::(anonymous namespace)::GetLibuvNow(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.0%    0.0%  t __ZN2v88internalL26Builtin_Impl_HandleApiCallENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      7    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb0EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      7    0.0%    0.0%  T node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      7    0.0%    0.0%  T _thread_resume
+      7    0.0%    0.0%  T _mmap
+      7    0.0%    0.0%  T _mach_msg_overwrite
+      7    0.0%    0.0%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      7    0.0%    0.0%  T __ZN2v87Context29GetNumberOfEmbedderDataFieldsEv
+      7    0.0%    0.0%  T __ZN2v86Object3NewEPNS_7IsolateE
+      6    0.0%    0.0%  t node::LibuvStreamWrap::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)::$_0::__invoke(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      6    0.0%    0.0%  T node::errors::TryCatchScope::~TryCatchScope()
+      6    0.0%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      6    0.0%    0.0%  T __ZN2v88internal9Accessors20FunctionLengthGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      6    0.0%    0.0%  T __ZN2v87Isolate17GetCurrentContextEv
+      6    0.0%    0.0%  T __ZN2v811ArrayBuffer11GetContentsEv
+      5    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<node::CleanupHookCallback, void*>*> std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::find<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      5    0.0%    0.0%  t node::Environment::RunAndClearNativeImmediates(bool)::$_7::operator()(node::CallbackQueue<void, node::Environment*>*) const
+      5    0.0%    0.0%  t node::AsyncHooks::push_async_context(double, double, v8::Local<v8::Object>)
+      5    0.0%    0.0%  t node::(anonymous namespace)::IsAnyArrayBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.0%    0.0%  T node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+      5    0.0%    0.0%  T node::NodePlatform::CurrentClockTimeMillis()
+      5    0.0%    0.0%  T _freopen
+      5    0.0%    0.0%  T __ZN2v88internal25FunctionCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectENS0_10HeapObjectES4_S5_Pmi
+      5    0.0%    0.0%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      5    0.0%    0.0%  T __ZN2v82V818GlobalizeReferenceEPNS_8internal7IsolateEPm
+      5    0.0%    0.0%  T __ZN2v815ArrayBufferView6BufferEv
+      4    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.0%    0.0%  t non-virtual thunk to node::http2::Http2Stream::IsClosing()
+      4    0.0%    0.0%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t node::TraceEventScope::TraceEventScope(char const*, char const*, void*)
+      4    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t node::(anonymous namespace)::Parser::OnStreamRead(long, uv_buf_t const&)
+      4    0.0%    0.0%  t node::(anonymous namespace)::IsArgumentsObject(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t names_match(char const*, char const*)
+      4    0.0%    0.0%  t _set_tiny_meta_header_in_use
+      4    0.0%    0.0%  t _rack_region_insert
+      4    0.0%    0.0%  t _create_scalable_szone
+      4    0.0%    0.0%  t __ZN2v88internal14LookupIterator17PropertyOrElementEPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEENS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      4    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_124ProbeInstantiationsCacheEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEEiNS1_11CachingModeE
+      4    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  T node::LibuvStreamWrap::OnUvRead(long, uv_buf_t const*)
+      4    0.0%    0.0%  T node::Environment::RunAndClearNativeImmediates(bool)
+      4    0.0%    0.0%  T __ZNK2v85Value12IntegerValueENS_5LocalINS_7ContextEEE
+      4    0.0%    0.0%  T __ZN4node6crypto6PBKDF2ERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.0%    0.0%  T __ZN4node6crypto4Hmac3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::PipeWrap::~PipeWrap()
+      3    0.0%    0.0%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::(anonymous namespace)::Parser::Initialize(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t _rack_init
+      3    0.0%    0.0%  t _free_tiny
+      3    0.0%    0.0%  t __pthread_mutex_lock_init_slow
+      3    0.0%    0.0%  t __ZN2v88internalL24Builtin_Impl_ArrayConcatENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      3    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb1EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      3    0.0%    0.0%  T void node::StreamBase::JSMethod<&(node::StreamBase::ReadStartJS(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T void node::BaseObject::InternalFieldSet<2, &(v8::Value::IsFunction() const)>(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
+      3    0.0%    0.0%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T node::ConnectionWrap<node::TCPWrap, uv_tcp_s>::OnConnection(uv_stream_s*, int)
+      3    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      3    0.0%    0.0%  T _malloc_zone_from_ptr
+      3    0.0%    0.0%  T __pthread_exit_if_canceled
+      3    0.0%    0.0%  T __ZNK2v85Array6LengthEv
+      3    0.0%    0.0%  T __ZN4node7TLSWrap6EncOutEv
+      3    0.0%    0.0%  T __ZN4node6crypto13SecureContext4InitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.0%    0.0%  T __ZN2v88internal9Accessors23FunctionPrototypeGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      2    0.0%    0.0%  t std::__1::vector<v8::Global<v8::Object>, std::__1::allocator<v8::Global<v8::Object> > >::__append(unsigned long)
+      2    0.0%    0.0%  t std::__1::deque<node::http2::nghttp2_stream_write, std::__1::allocator<node::http2::nghttp2_stream_write> >::__add_back_capacity()
+      2    0.0%    0.0%  t node::util::GetOwnNonIndexProperties(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::StreamBase::Write(uv_buf_t*, unsigned long, uv_stream_s*, v8::Local<v8::Object>)
+      2    0.0%    0.0%  t node::Environment::StartProfilerIdleNotifier()::$_5::__invoke(uv_check_s*)
+      2    0.0%    0.0%  t node::(anonymous namespace)::ToggleImmediateRef(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(), &(node::(anonymous namespace)::Parser::on_headers_complete())>::Raw(llhttp__internal_s*)
+      2    0.0%    0.0%  t _loadCat
+      2    0.0%    0.0%  t _default_zone_free_definite_size
+      2    0.0%    0.0%  t ___vfwscanf
+      2    0.0%    0.0%  t ___part_load_locale
+      2    0.0%    0.0%  t __ZNSt3__113__vector_baseIN2v88internal15TranslatedFrameENS_9allocatorIS3_EEED2Ev
+      2    0.0%    0.0%  t __ZN2v88internalL46Builtin_Impl_ArrayBufferPrototypeGetByteLengthENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      2    0.0%    0.0%  t __ZN2v88internal22HandleScopeImplementer12EnterContextENS0_7ContextE
+      2    0.0%    0.0%  t __ZN2v88internal19SequentialStringKeyIhE7IsMatchENS0_6StringE
+      2    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_117InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEEb
+      2    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      2    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::IsAlive()
+      2    0.0%    0.0%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      2    0.0%    0.0%  T node::Environment::RunAndClearInterrupts()
+      2    0.0%    0.0%  T node::Environment::GetNow()
+      2    0.0%    0.0%  T node::Environment::CheckImmediate(uv_check_s*)
+      2    0.0%    0.0%  T node::EmitToJSStreamListener::OnStreamAlloc(unsigned long)
+      2    0.0%    0.0%  T node::AsyncWrap::GetAsyncId(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      2    0.0%    0.0%  T _malloc_set_zone_name
+      2    0.0%    0.0%  T _getsourcefilter
+      2    0.0%    0.0%  T _cosh$fenv_access_off
+      2    0.0%    0.0%  T __ZN4node6crypto4Hmac10HmacUpdateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node27DTRACE_HTTP_SERVER_RESPONSEERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal9Accessors23IsJSObjectFieldAccessorEPNS0_7IsolateENS0_6HandleINS0_3MapEEENS4_INS0_4NameEEEPNS0_10FieldIndexE
+      2    0.0%    0.0%  T __ZN2v88internal5Scope6LookupILNS1_15ScopeLookupModeE0EEEPNS0_8VariableEPNS0_13VariableProxyEPS1_S8_S8_b
+      2    0.0%    0.0%  T __ZN2v88internal5Scope27ResolveVariablesRecursivelyEPNS0_9ParseInfoE
+      2    0.0%    0.0%  T __ZN2v88internal41Builtin_ArrayBufferPrototypeGetByteLengthEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v88internal35IsolateFromNeverReadOnlySpaceObjectEm
+      2    0.0%    0.0%  T __ZN2v88internal30Builtin_ArrayBufferConstructorEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v88internal25PropertyCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectES4_NS0_8JSObjectENS_5MaybeINS0_11ShouldThrowEEE
+      2    0.0%    0.0%  T __ZN2v88internal12AstRawString7CompareEPvS2_
+      2    0.0%    0.0%  T __ZN2v88internal11VariableMap7DeclareEPNS0_4ZoneEPNS0_5ScopeEPKNS0_12AstRawStringENS0_12VariableModeENS0_12VariableKindENS0_18InitializationFlagENS0_17MaybeAssignedFlagEPb
+      2    0.0%    0.0%  T __ZN2v88internal10ApiNatives19InstantiateFunctionENS0_6HandleINS0_20FunctionTemplateInfoEEENS0_11MaybeHandleINS0_4NameEEE
+      2    0.0%    0.0%  T __ZN2v88TryCatchD2Ev
+      2    0.0%    0.0%  T __ZN2v87Integer3NewEPNS_7IsolateEi
+      2    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEEj
+      2    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+      2    0.0%    0.0%  T __ZN2v815ArrayBufferView10ByteLengthEv
+      2    0.0%    0.0%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+      1    0.0%    0.0%  t void node::cares_wrap::(anonymous namespace)::Query<node::cares_wrap::(anonymous namespace)::QuerySrvWrap>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t unsigned long std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::__erase_unique<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.0%    0.0%  t non-virtual thunk to node::http2::Http2Stream::HasWantsWrite() const
+      1    0.0%    0.0%  t node::util::SetHiddenValue(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::util::GetProxyDetails(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::TraceEventScope::~TraceEventScope()
+      1    0.0%    0.0%  t node::SlicedArguments::SlicedArguments(v8::FunctionCallbackInfo<v8::Value> const&, unsigned long)
+      1    0.0%    0.0%  t node::NonOwningExternalTwoByteResource::data() const
+      1    0.0%    0.0%  t node::MaybeStackBuffer<char, 1024ul>::AllocateSufficientStorage(unsigned long)
+      1    0.0%    0.0%  t node::LibuvStreamWrap::ReadStart()::$_1::__invoke(uv_handle_s*, unsigned long, uv_buf_t*)
+      1    0.0%    0.0%  t node::Environment::AddCleanupHook(void (*)(void*), void*)
+      1    0.0%    0.0%  t node::BaseObject::~BaseObject()
+      1    0.0%    0.0%  t node::BaseObject::decrease_refcount()
+      1    0.0%    0.0%  t node::AsyncHooks::pop_async_context(double)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::on_url(char const*, unsigned long)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(char const*, unsigned long), &(node::(anonymous namespace)::Parser::on_header_field(char const*, unsigned long))>::Raw(llhttp__internal_s*, char const*, unsigned long)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Free(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Execute(char const*, unsigned long)
+      1    0.0%    0.0%  t node::(anonymous namespace)::ExternString<v8::String::ExternalOneByteStringResource, char>::New(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>*)
+      1    0.0%    0.0%  t _szone_calloc
+      1    0.0%    0.0%  t _small_malloc_from_free_list
+      1    0.0%    0.0%  t _mvm_protect
+      1    0.0%    0.0%  t _malloc_zone_register_while_locked
+      1    0.0%    0.0%  t _default_zone_calloc
+      1    0.0%    0.0%  t __cxxabiv1::__vmi_class_type_info::search_below_dst(__cxxabiv1::__dynamic_cast_info*, void const*, int, bool) const
+      1    0.0%    0.0%  t __ZN2v8L15InternalFieldOKENS_8internal6HandleINS0_10JSReceiverEEEiPKc
+      1    0.0%    0.0%  t __ZN2v88internalL21Builtin_Impl_ArrayPopENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_133MatchArrayElementsKindToArgumentsEPNS0_7IsolateENS0_6HandleINS0_7JSArrayEEEPNS0_16BuiltinArgumentsEii
+      1    0.0%    0.0%  T void node::StreamBase::JSMethod<&(node::StreamBase::Shutdown(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T std::__1::ios_base::init(void*)
+      1    0.0%    0.0%  T std::__1::ios_base::Init::Init()
+      1    0.0%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.0%    0.0%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::contextify::CompiledFnEntry::CompiledFnEntry(node::Environment*, v8::Local<v8::Object>, unsigned int, v8::Local<v8::ScriptOrModule>)
+      1    0.0%    0.0%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::TCPWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+      1    0.0%    0.0%  T node::StreamBase::Writev(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::StreamBase::GetBytesRead(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      1    0.0%    0.0%  T node::InternalCallbackScope::~InternalCallbackScope()
+      1    0.0%    0.0%  T node::HandleWrap::HandleWrap(node::Environment*, v8::Local<v8::Object>, uv_handle_s*, node::AsyncWrap::ProviderType)
+      1    0.0%    0.0%  T node::Environment::RunWeakRefCleanup()
+      1    0.0%    0.0%  T node::Environment::Reallocate(char*, unsigned long, unsigned long)
+      1    0.0%    0.0%  T node::EmitToJSStreamListener::OnStreamRead(long, uv_buf_t const&)
+      1    0.0%    0.0%  T node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventDestroy()
+      1    0.0%    0.0%  T node::AsyncWrap::EmitAfter(node::Environment*, double)
+      1    0.0%    0.0%  T _vm_region_64
+      1    0.0%    0.0%  T _uuid_compare
+      1    0.0%    0.0%  T _tempnam
+      1    0.0%    0.0%  T _task_self_trap
+      1    0.0%    0.0%  T _pthread_setcanceltype
+      1    0.0%    0.0%  T _malloc_zone_malloc
+      1    0.0%    0.0%  T _malloc_zone_calloc
+      1    0.0%    0.0%  T _host_self_trap
+      1    0.0%    0.0%  T ___sysctl
+      1    0.0%    0.0%  T __ZThn312_N4node7TLSWrap13OnStreamAllocEm
+      1    0.0%    0.0%  T __ZThn248_NK4node7TLSWrap5ErrorEv
+      1    0.0%    0.0%  T __ZNK2v88internal10Expression15ToBooleanIsTrueEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsObjectEv
+      1    0.0%    0.0%  T __ZNK2v85Value6IsTrueEv
+      1    0.0%    0.0%  T __ZN4node7TLSWrap8ClearOutEv
+      1    0.0%    0.0%  T __ZN4node7TLSWrap5StartERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node7TLSWrap13SetServernameERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node7TLSWrap12OnStreamReadElRK8uv_buf_t
+      1    0.0%    0.0%  T __ZN4node7TLSWrap12InvokeQueuedEiPKc
+      1    0.0%    0.0%  T __ZN4node6crypto7NodeBIO9FreeEmptyEv
+      1    0.0%    0.0%  T __ZN4node6crypto7NodeBIO4ReadEPcm
+      1    0.0%    0.0%  T __ZN4node6crypto19GetRootCertificatesERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope25AllocateNonParameterLocalEPNS0_8VariableE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope18AsDeclarationScopeEv
+      1    0.0%    0.0%  T __ZN2v88internal5Scope17LookupInScopeInfoEPKNS0_12AstRawStringEPS1_
+      1    0.0%    0.0%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory9GetStringEjbNS0_6VectorIKhEE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory24GetOneByteStringInternalENS0_6VectorIKhEE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory13NewConsStringEv
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory11InternalizeEPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88TryCatchD1Ev
+      1    0.0%    0.0%  T __ZN2v88TryCatchC1EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v87Isolate31SuppressMicrotaskExecutionScopeC1EPS0_
+      1    0.0%    0.0%  T __ZN2v87Integer15NewFromUnsignedEPNS_7IsolateEj
+      1    0.0%    0.0%  T __ZN2v87Context5EnterEv
+      1    0.0%    0.0%  T __ZN2v86String14NewFromOneByteEPNS_7IsolateEPKhNS_13NewStringTypeEi
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+      1    0.0%    0.0%  T __ZN2v86Object3HasENS_5LocalINS_7ContextEEENS1_INS_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v86Object32SetAlignedPointerInInternalFieldEiPv
+      1    0.0%    0.0%  T __ZN2v86Object15CreationContextEv
+      1    0.0%    0.0%  T __ZN2v820EscapableHandleScopeC1EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v816FunctionTemplate11GetFunctionENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  T __ZN2v811HandleScopeD1Ev
+
+ [Summary]:
+   ticks  total  nonlib   name
+    772    4.1%    4.1%  JavaScript
+  18001   94.8%   95.7%  C++
+    308    1.6%    1.6%  GC
+    174    0.9%          Shared libraries
+     40    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   5655   70.0%   29.8%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+   1894   23.4%   10.0%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    207    2.6%    1.1%  T _mach_msg_send
+     93    1.2%    0.5%  T _proc_name
+     15    0.2%    0.1%  T __ZN2v88internal19Builtin_ArrayConcatEiPmPNS0_7IsolateE
+     14    0.2%    0.1%  T _task_get_special_port
+     14    0.2%    0.1%  T __kernelrpc_mach_port_construct_trap
+     11    0.1%    0.1%  T _fstatfs64
+     11    0.1%    0.1%  T __kernelrpc_vm_remap
+      7    0.1%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.1%    0.0%  t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.1%    0.0%  T __ZN2v88internal20Builtin_ArrayUnshiftEiPmPNS0_7IsolateE
+      6    0.1%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      6    0.1%    0.0%  T __ZN2v88internal9Accessors20FunctionLengthGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      6    0.1%    0.0%  T __ZN2v811ArrayBuffer11GetContentsEv
+      5    0.1%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.1%    0.0%  T node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+      5    0.1%    0.0%  T _mmap
+      5    0.1%    0.0%  T __ZN2v88internal30Builtin_ArrayBufferConstructorEiPmPNS0_7IsolateE
+      5    0.1%    0.0%  T __ZN2v815ArrayBufferView6BufferEv
+      4    0.0%    0.0%  t node::(anonymous namespace)::IsArgumentsObject(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t node::(anonymous namespace)::GetLibuvNow(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t _tiny_malloc_should_clear
+      4    0.0%    0.0%  T __ZNK2v85Value12IntegerValueENS_5LocalINS_7ContextEEE
+      4    0.0%    0.0%  T __ZN2v88internal41Builtin_ArrayBufferPrototypeGetByteLengthEiPmPNS0_7IsolateE
+      3    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T __ZN2v88internal16Builtin_ArrayPopEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  t node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::(anonymous namespace)::IsAnyArrayBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t ___vfprintf
+      2    0.0%    0.0%  T non-virtual thunk to node::LibuvStreamWrap::IsAlive()
+      2    0.0%    0.0%  T node::Environment::GetNow()
+      2    0.0%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      2    0.0%    0.0%  T _thread_resume
+      2    0.0%    0.0%  T ___pthread_init
+      2    0.0%    0.0%  T __ZN4node7TLSWrap6EncOutEv
+      2    0.0%    0.0%  T __ZN4node27DTRACE_HTTP_SERVER_RESPONSEERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal12AstRawString7CompareEPvS2_
+      2    0.0%    0.0%  T __ZN2v88internal11VariableMap7DeclareEPNS0_4ZoneEPNS0_5ScopeEPKNS0_12AstRawStringENS0_12VariableModeENS0_12VariableKindENS0_18InitializationFlagENS0_17MaybeAssignedFlagEPb
+      2    0.0%    0.0%  T __ZN2v87Isolate17GetCurrentContextEv
+      2    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+      2    0.0%    0.0%  T __ZN2v815ArrayBufferView10ByteLengthEv
+      1    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.0%    0.0%  t non-virtual thunk to node::http2::Http2Stream::IsClosing()
+      1    0.0%    0.0%  t node::util::GetProxyDetails(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::util::GetOwnNonIndexProperties(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::StreamBase::Write(uv_buf_t*, unsigned long, uv_stream_s*, v8::Local<v8::Object>)
+      1    0.0%    0.0%  t node::SlicedArguments::SlicedArguments(v8::FunctionCallbackInfo<v8::Value> const&, unsigned long)
+      1    0.0%    0.0%  t node::MaybeStackBuffer<char, 1024ul>::AllocateSufficientStorage(unsigned long)
+      1    0.0%    0.0%  t node::Environment::AddCleanupHook(void (*)(void*), void*)
+      1    0.0%    0.0%  t node::(anonymous namespace)::ExternString<v8::String::ExternalOneByteStringResource, char>::New(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>*)
+      1    0.0%    0.0%  t _szone_malloc_should_clear
+      1    0.0%    0.0%  t _szone_calloc
+      1    0.0%    0.0%  t _rack_region_insert
+      1    0.0%    0.0%  t _rack_init
+      1    0.0%    0.0%  t _free_tiny
+      1    0.0%    0.0%  t __pthread_mutex_lock_init_slow
+      1    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      1    0.0%    0.0%  T void node::StreamBase::JSMethod<&(node::StreamBase::Writev(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T std::__1::ios_base::Init::Init()
+      1    0.0%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.0%    0.0%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::contextify::CompiledFnEntry::CompiledFnEntry(node::Environment*, v8::Local<v8::Object>, unsigned int, v8::Local<v8::ScriptOrModule>)
+      1    0.0%    0.0%  T node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+      1    0.0%    0.0%  T node::StreamBase::Writev(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::StreamBase::GetBytesRead(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T _malloc_set_zone_name
+      1    0.0%    0.0%  T _freopen
+      1    0.0%    0.0%  T __ZThn248_NK4node7TLSWrap5ErrorEv
+      1    0.0%    0.0%  T __ZNK2v85Value8IsObjectEv
+      1    0.0%    0.0%  T __ZNK2v85Value6IsTrueEv
+      1    0.0%    0.0%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope6LookupILNS1_15ScopeLookupModeE0EEEPNS0_8VariableEPNS0_13VariableProxyEPS1_S8_S8_b
+      1    0.0%    0.0%  T __ZN2v88internal5Scope27ResolveVariablesRecursivelyEPNS0_9ParseInfoE
+      1    0.0%    0.0%  T __ZN2v88internal38Builtin_CallSitePrototypeGetLineNumberEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal18Builtin_ArrayShiftEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory9GetStringEjbNS0_6VectorIKhEE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory24GetOneByteStringInternalENS0_6VectorIKhEE
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory13NewConsStringEv
+      1    0.0%    0.0%  T __ZN2v88internal15AstValueFactory11InternalizeEPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88TryCatchC1EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+      1    0.0%    0.0%  T __ZN2v87Isolate31SuppressMicrotaskExecutionScopeC1EPS0_
+      1    0.0%    0.0%  T __ZN2v87Integer15NewFromUnsignedEPNS_7IsolateEj
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+      1    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEEj
+      1    0.0%    0.0%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   9053   47.7%  T _fcntl$NOCANCEL
+
+   5785   30.5%  T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+   1961   33.9%    T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+    200   10.2%      T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     27   13.5%        LazyCompile: *get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/get.js:8:30
+     18   66.7%          LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+      8   44.4%            LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+      7   38.9%            LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      2   11.1%            LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1    5.6%            LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      5   18.5%          LazyCompile: ~Query.cast /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4955:32
+      4   80.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1   20.0%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      2    7.4%          LazyCompile: *Query._castConditions /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2043:43
+      2  100.0%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      1    3.7%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:69:35
+      1    3.7%          LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%            LazyCompile: ~formatValue internal/util/inspect.js:725:21
+     19    9.5%        LazyCompile: *_init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:765:17
+     15   78.9%          LazyCompile: *Document.$__init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:702:38
+     13   86.7%            LazyCompile: *completeMany /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      2   13.3%            LazyCompile: *cb /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2110:14
+      2   10.5%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      2   10.5%          LazyCompile: *init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:751:14
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     14    7.0%        LazyCompile: *asString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:33:18
+      7   50.0%          LazyCompile: ~timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      7  100.0%            LazyCompile: ~colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      6   42.9%          LazyCompile: *_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+      6  100.0%            LazyCompile: ~log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:70:6
+      1    7.1%          LazyCompile: *sendToListeners /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:22:25
+      1  100.0%            LazyCompile: ~send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:87:9
+     10    5.0%        T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      4   40.0%          LazyCompile: ~set /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/memory.js:119:41
+      4  100.0%            LazyCompile: ~save /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/session.js:71:54
+      2   20.0%          LazyCompile: ~isValid /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/read_preference.js:130:19
+      1   50.0%            LazyCompile: *selectServer /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/topology.js:281:17
+      1   50.0%            LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      2   20.0%          LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      2  100.0%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      1   10.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      1   10.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      7    3.5%        LazyCompile: ~verifyToken /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/middlewares/tokenVerifier.js:5:21
+      3   42.9%          LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/route.js:114:16
+      2   28.6%          LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/route.js:114:16
+      2  100.0%            LazyCompile: ~dispatch /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/route.js:98:45
+      2   28.6%          LazyCompile: *handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            LazyCompile: ~next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/route.js:114:16
+      7    3.5%        LazyCompile: ~databaseNamespace /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:538:27
+      4   57.1%          LazyCompile: *command /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:161:12
+      4  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:171:42
+      3   42.9%          LazyCompile: ~command /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:161:12
+      3  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:171:42
+      7    3.5%        LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      7  100.0%          LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      4   57.1%            LazyCompile: *inspect internal/util/inspect.js:275:17
+      2   28.6%            LazyCompile: ~inspect internal/util/inspect.js:275:17
+      1   14.3%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      7    3.5%        LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      7  100.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      7  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      7    3.5%        LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+      5   71.4%          LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+      5  100.0%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      1   14.3%          LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1   14.3%          LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      1  100.0%            LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      6    3.0%        LazyCompile: ~messageHandler /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:421:35
+      6  100.0%          LazyCompile: *connectionListenerInternal _http_server.js:401:36
+      4   66.7%            LazyCompile: *Writable.write _stream_writable.js:291:36
+      1   16.7%            LazyCompile: ~_write /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1   16.7%            LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+      6    3.0%        LazyCompile: ~fromString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:478:22
+      6  100.0%          LazyCompile: ~ns /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:456:12
+      6  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      6    3.0%        LazyCompile: ~format /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/content-type/index.js:65:17
+      5   83.3%          LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+      5  100.0%            LazyCompile: ~json /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:239:25
+      1   16.7%          LazyCompile: ~setCharset /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/utils.js:250:41
+      1  100.0%            LazyCompile: ~send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+      6    3.0%        LazyCompile: *fromString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:478:22
+      6  100.0%          LazyCompile: ~ns /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:456:12
+      6  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      5    2.5%        LazyCompile: *timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      5  100.0%          LazyCompile: ~colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      5  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+      4    2.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      3   75.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      2   66.7%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1   33.3%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1   25.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:279:20
+      1  100.0%            LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      4    2.0%        LazyCompile: ~expressInit /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/middleware/init.js:29:30
+      4  100.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      4  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      3    1.5%        LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      3  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      2    1.0%        LazyCompile: ~stat internal/modules/cjs/loader.js:123:14
+      1   50.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      1   50.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2    1.0%        LazyCompile: ~set /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/memory.js:119:41
+      2  100.0%          LazyCompile: ~save /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/session.js:71:54
+      2  100.0%            LazyCompile: ~save /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:403:20
+      2    1.0%        LazyCompile: ~checkInvalidHeaderChar _http_common.js:226:32
+      2  100.0%          LazyCompile: ~<anonymous> _http_outgoing.js:518:45
+      2  100.0%            LazyCompile: *hidden internal/errors.js:282:25
+      2    1.0%        LazyCompile: ~asString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:33:18
+      2  100.0%          LazyCompile: ~timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+      2  100.0%            LazyCompile: ~colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+      2    1.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      2  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      2    1.0%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      2    1.0%        LazyCompile: *EventEmitter.init events.js:129:29
+      1   50.0%          LazyCompile: ~EventEmitter events.js:63:22
+      1  100.0%            LazyCompile: ~Stream internal/streams/legacy.js:9:16
+      1   50.0%          LazyCompile: *Socket net.js:267:16
+      1  100.0%            LazyCompile: *onconnection net.js:1529:22
+      2    1.0%        LazyCompile: *Document.isModified /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:2014:41
+      2  100.0%          LazyCompile: *Document.$__init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:702:38
+      2  100.0%            LazyCompile: *completeMany /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      2    1.0%        LazyCompile: *Document /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:75:18
+      1   50.0%          LazyCompile: ~Model /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/model.js:100:15
+      1  100.0%            LazyCompile: ~model /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/model.js:4745:27
+      1   50.0%          LazyCompile: *completeMany /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      2    1.0%        LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      2  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      2  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      2    1.0%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      2  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      2  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     80    4.1%      LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+     72   90.0%        LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+     70   97.2%          LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+     27   38.6%            LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+     23   32.9%            LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+     15   21.4%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      5    7.1%            LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      2    2.8%          LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      2  100.0%            LazyCompile: ~formatValue internal/util/inspect.js:725:21
+      6    7.5%        LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+      4   66.7%          LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+      4  100.0%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      1   16.7%          LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      1  100.0%            LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      1   16.7%          LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      2    2.5%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      2  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      2  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     50    2.5%      LazyCompile: ~CastError /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/error/cast.js:21:14
+     50  100.0%        LazyCompile: ~exec /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4539:37
+     50  100.0%          LazyCompile: ~Query.then /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4641:32
+     49   98.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    2.0%            t node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+     40    2.0%      LazyCompile: ~initialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/passport/lib/middleware/initialize.js:51:29
+     35   87.5%        LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+     26   74.3%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     26  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+      9   25.7%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      9  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+      5   12.5%        LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%          LazyCompile: ~trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      5  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     38    1.9%      LazyCompile: *get /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/get.js:8:30
+     22   57.9%        LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+     11   50.0%          LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+     11  100.0%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      4   18.2%          LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      4  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      4   18.2%          LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      4  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      3   13.6%          LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      3  100.0%            LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      5   13.2%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      5  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      5  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      4   10.5%        LazyCompile: ~Query.cast /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4955:32
+      3   75.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      3  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1   25.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      4   10.5%        LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      4  100.0%          LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+      3   75.0%            LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1   25.0%            LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1    2.6%        LazyCompile: ~isBsonType /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/isBsonType.js:9:20
+      1  100.0%          LazyCompile: ~clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+      1  100.0%            LazyCompile: ~cloneObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:110:21
+      1    2.6%        LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1  100.0%            LazyCompile: ~stringify /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:1118:20
+      1    2.6%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      1  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     35    1.8%      LazyCompile: *Socket net.js:267:16
+     35  100.0%        LazyCompile: *onconnection net.js:1529:22
+     33    1.7%      LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+     14   42.4%        LazyCompile: ~json /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:239:25
+     14  100.0%          LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+     14  100.0%            LazyCompile: ~exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+     10   30.3%        LazyCompile: *json /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:239:25
+     10  100.0%          LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+      8   80.0%            LazyCompile: ~exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+      2   20.0%            LazyCompile: *exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+      9   27.3%        LazyCompile: ~exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+      9  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      9  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     32    1.6%      LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+     10   31.3%        LazyCompile: *handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:136:31
+      9   90.0%          LazyCompile: ~router /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:46:18
+      9  100.0%            LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1   10.0%          LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/application.js:158:29
+      1  100.0%            LazyCompile: ~app /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/express.js:38:21
+      6   18.8%        LazyCompile: *session /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:179:26
+      6  100.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      5   83.3%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      1   16.7%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      4   12.5%        LazyCompile: ~session /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:179:26
+      3   75.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      2   66.7%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      1   33.3%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      1   25.0%          LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      3    9.4%        LazyCompile: ~jsonParser /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/body-parser/lib/types/json.js:98:30
+      3  100.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      3  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      2    6.3%        LazyCompile: ~strategy.pass /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/passport/lib/middleware/authenticate.js:336:31
+      2  100.0%          LazyCompile: ~SessionStrategy.authenticate /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/passport/lib/strategies/session.js:45:50
+      2  100.0%            LazyCompile: ~attempt /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/passport/lib/middleware/authenticate.js:171:22
+      2    6.3%        LazyCompile: ~initialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/passport/lib/middleware/initialize.js:51:29
+      1   50.0%          LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1   50.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      2    6.3%        LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:136:31
+      2  100.0%          LazyCompile: ~router /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:46:18
+      2  100.0%            LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      2    6.3%        LazyCompile: ~cookieParser /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/cookie-parser/index.js:44:32
+      1   50.0%          LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1   50.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      1    3.1%        LazyCompile: ~query /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/middleware/query.js:39:24
+      1  100.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     31    1.6%      LazyCompile: *onwrite _stream_writable.js:431:17
+     18   58.1%        LazyCompile: *afterWriteDispatched internal/stream_base_commons.js:151:30
+      9   50.0%          LazyCompile: *value internal/console/constructor.js:243:20
+      9  100.0%            LazyCompile: ~log internal/console/constructor.js:342:6
+      8   44.4%          LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      5   62.5%            LazyCompile: *clearBuffer _stream_writable.js:497:21
+      3   37.5%            LazyCompile: ~Socket._writev net.js:793:36
+      1    5.6%          LazyCompile: *Writable.write _stream_writable.js:291:36
+      1  100.0%            LazyCompile: ~value internal/console/constructor.js:243:20
+      5   16.1%        LazyCompile: *writevGeneric internal/stream_base_commons.js:118:23
+      5  100.0%          LazyCompile: *clearBuffer _stream_writable.js:497:21
+      4   80.0%            LazyCompile: ~Writable.uncork _stream_writable.js:328:37
+      1   20.0%            LazyCompile: *end _http_outgoing.js:738:45
+      4   12.9%        LazyCompile: *Socket._writeGeneric net.js:761:42
+      2   50.0%          LazyCompile: ~Socket._writev net.js:793:36
+      2  100.0%            LazyCompile: ~clearBuffer _stream_writable.js:497:21
+      2   50.0%          LazyCompile: *value internal/console/constructor.js:243:20
+      2  100.0%            LazyCompile: ~log internal/console/constructor.js:342:6
+      2    6.5%        LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+      2  100.0%          LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+      2  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    3.2%        LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      1  100.0%          LazyCompile: ~Socket._writev net.js:793:36
+      1  100.0%            LazyCompile: ~clearBuffer _stream_writable.js:497:21
+      1    3.2%        LazyCompile: *connectionListenerInternal _http_server.js:401:36
+      1  100.0%          LazyCompile: *Writable.write _stream_writable.js:291:36
+      1  100.0%            LazyCompile: ~ondata _stream_readable.js:716:18
+     28    1.4%      LazyCompile: ~setWriteHeadHeaders /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/on-headers/index.js:105:30
+     28  100.0%        LazyCompile: ~writeHead /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/on-headers/index.js:28:29
+     17   60.7%          LazyCompile: ~_implicitHeader _http_server.js:238:68
+     17  100.0%            LazyCompile: ~writetop /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:270:24
+      7   25.0%          LazyCompile: *writetop /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:270:24
+      7  100.0%            LazyCompile: ~end /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:250:27
+      4   14.3%          LazyCompile: *end /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:250:27
+      4  100.0%            LazyCompile: *send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:107:25
+     27    1.4%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4559:38
+     21   77.8%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+     21  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     21  100.0%            LazyCompile: ~exec /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4539:37
+      6   22.2%        LazyCompile: *exec /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4539:37
+      6  100.0%          LazyCompile: ~Query.then /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4641:32
+      6  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     26    1.3%      LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     10   38.5%        LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      8   80.0%          LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      8  100.0%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      2   20.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      6   23.1%        LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      6  100.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      6  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      4   15.4%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      4  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      4  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      3   11.5%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      3  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      3   11.5%        LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:428:14
+      3  100.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:234:47
+      3  100.0%            LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     26    1.3%      LazyCompile: *generate /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:363:22
+     26  100.0%        LazyCompile: *session /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:179:26
+     26  100.0%          LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+     19   73.1%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      7   26.9%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     25    1.3%      LazyCompile: *session /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:179:26
+     25  100.0%        LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+     21   84.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     21  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+      4   16.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      4  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+     25    1.3%      LazyCompile: *nextTick internal/process/task_queues.js:105:18
+      4   16.0%        LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      4  100.0%          LazyCompile: ~Socket._writev net.js:793:36
+      4  100.0%            LazyCompile: ~clearBuffer _stream_writable.js:497:21
+      4   16.0%        LazyCompile: ~Kareem.execPre /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:8:36
+      4  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4559:38
+      4  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      3   12.0%        LazyCompile: ~resOnFinish _http_server.js:671:21
+      3  100.0%          LazyCompile: *emit events.js:262:44
+      3  100.0%            LazyCompile: ~onFinish _http_outgoing.js:733:18
+      3   12.0%        LazyCompile: *command /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:133:12
+      3  100.0%          LazyCompile: ~execute /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/find.js:31:12
+      3  100.0%            LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/execute_operation.js:131:67
+      2    8.0%        LazyCompile: ~write_ _http_outgoing.js:639:16
+      2  100.0%          LazyCompile: ~write _http_outgoing.js:632:49
+      2  100.0%            LazyCompile: ~writetop /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:270:24
+      2    8.0%        LazyCompile: ~maybeReadMore _stream_readable.js:581:23
+      2  100.0%          LazyCompile: ~addChunk _stream_readable.js:287:18
+      2  100.0%            LazyCompile: ~readableAddChunk _stream_readable.js:221:26
+      2    8.0%        LazyCompile: ~init /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:28:16
+      2  100.0%          LazyCompile: *completeMany /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      2    8.0%        LazyCompile: ~<anonymous> internal/streams/destroy.js:38:30
+      2  100.0%          LazyCompile: ~Socket._destroy net.js:653:37
+      2  100.0%            LazyCompile: ~destroy internal/streams/destroy.js:5:17
+      1    4.0%        LazyCompile: ~resume _stream_readable.js:973:16
+      1  100.0%          LazyCompile: ~Readable.resume _stream_readable.js:959:37
+      1  100.0%            LazyCompile: ~Socket.resume net.js:611:35
+      1    4.0%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:369:20
+      1  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:4567:43
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:22:37
+      1    4.0%        LazyCompile: *execute /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/find.js:31:12
+      1  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/operations/execute_operation.js:131:67
+      1  100.0%            LazyCompile: *processWaitQueue /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/topology.js:628:26
+     24    1.2%      LazyCompile: ~set /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/memory.js:119:41
+     24  100.0%        LazyCompile: ~save /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/session/session.js:71:54
+     24  100.0%          LazyCompile: ~save /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:403:20
+     15   62.5%            LazyCompile: ~end /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:250:27
+      9   37.5%            LazyCompile: *end /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express-session/index.js:250:27
+     24    1.2%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+     23   95.8%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      1    4.2%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:69:35
+     22    1.1%      LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     21    1.1%      LazyCompile: *asString /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/date-format/lib/index.js:33:18
+     10   47.6%        LazyCompile: ~timestampLevelAndCategory /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:40:35
+     10  100.0%          LazyCompile: ~colouredLayout /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/layouts.js:69:24
+     10  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+      8   38.1%        LazyCompile: *_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+      8  100.0%          LazyCompile: ~log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:70:6
+      8  100.0%            LazyCompile: ~Logger.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:123:43
+      3   14.3%        LazyCompile: *sendToListeners /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:22:25
+      3  100.0%          LazyCompile: ~send /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:87:9
+      3  100.0%            LazyCompile: ~_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+     20    1.0%      LazyCompile: ~cookieParser /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/cookie-parser/index.js:44:32
+     18   90.0%        LazyCompile: *trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+     14   77.8%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     14  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+      4   22.2%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+      4  100.0%            LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:176:16
+      2   10.0%        LazyCompile: ~handle /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%          LazyCompile: ~trim_prefix /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:288:23
+      2  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/router/index.js:275:64
+     20    1.0%      LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+     17   85.0%        LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+     11   64.7%          LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+      6   54.5%            LazyCompile: *deserializeObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:53:27
+      2   18.2%            LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      2   18.2%            LazyCompile: *deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      1    9.1%            LazyCompile: *parse /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/commands.js:577:10
+      5   29.4%          LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      5  100.0%            LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/bson.js:156:21
+      1    5.9%          LazyCompile: *deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      1  100.0%            LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/bson.js:156:21
+      3   15.0%        LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/parser/deserializer.js:24:21
+      3  100.0%          LazyCompile: ~deserialize /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/bson/lib/bson.js:156:21
+      3  100.0%            LazyCompile: ~parse /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/commands.js:577:10
+     98    1.7%    LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+     76   77.6%      LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+     29   38.2%        LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+     29  100.0%          LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+     29  100.0%            LazyCompile: *formatRaw internal/util/inspect.js:794:19
+     28   36.8%        LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+     28  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     28  100.0%            LazyCompile: ~stringify /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:1118:20
+     13   17.1%        LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+     13  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     11   84.6%            LazyCompile: *json /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:239:25
+      2   15.4%            LazyCompile: ~stringify /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:1118:20
+      6    7.9%        LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      6  100.0%          LazyCompile: *formatRaw internal/util/inspect.js:794:19
+      5   83.3%            LazyCompile: ~inspect internal/util/inspect.js:275:17
+      1   16.7%            LazyCompile: *inspect internal/util/inspect.js:275:17
+     17   17.3%      LazyCompile: *clone /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/helpers/clone.js:31:15
+     16   94.1%        LazyCompile: *Document.$toObject /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3359:40
+      7   43.8%          LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      7  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      7   43.8%          LazyCompile: *Document.inspect /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3941:38
+      7  100.0%            LazyCompile: *formatProperty internal/util/inspect.js:1674:24
+      2   12.5%          LazyCompile: *Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      2  100.0%            T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1    5.9%        LazyCompile: ~Document.toJSON /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/document.js:3902:37
+      1  100.0%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+      1  100.0%            LazyCompile: ~stringify /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/express/lib/response.js:1118:20
+      5    5.1%      LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      5  100.0%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      5  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     75    1.3%    LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     33   44.0%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     19   57.6%        LazyCompile: ~maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     19  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     19  100.0%            LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+     10   30.3%        LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     10  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     10  100.0%            LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+      4   12.1%        LazyCompile: *cleanupCursor /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:509:23
+      3   75.0%          LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:428:14
+      3  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      1   25.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      1  100.0%            LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+     24   32.0%      LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+     13   54.2%        LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     13  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+     13  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      6   25.0%        LazyCompile: *cleanupCursor /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:509:23
+      6  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      6  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      5   20.8%        LazyCompile: ~maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      5  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      5  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+     16   21.3%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+     16  100.0%        LazyCompile: ~handleOperationResult /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:315:42
+     16  100.0%          LazyCompile: ~messageHandler /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:421:35
+     13   81.3%            LazyCompile: *connectionListenerInternal _http_server.js:401:36
+      3   18.8%            LazyCompile: *emit events.js:262:44
+      1    1.3%      LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      1  100.0%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      1  100.0%          LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+      1  100.0%            LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      1    1.3%      LazyCompile: *cleanupCursor /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:509:23
+      1  100.0%        LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:428:14
+      1  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      1  100.0%            LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+     73    1.3%    LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     37   50.7%      LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+     23   62.2%        LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+     23  100.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+     23  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+     10   27.0%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+     10  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      4   10.8%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+      4  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      4  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     13   17.8%      LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+     13  100.0%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+     13  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     11   15.1%      LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+     11  100.0%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/query.js:2084:43
+     11  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+     11  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      5    6.8%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/kareem/index.js:370:24
+      5  100.0%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      4    5.5%      LazyCompile: *next /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:428:14
+      4  100.0%        LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cursor/abstract_cursor.js:234:47
+      4  100.0%          LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      4  100.0%            LazyCompile: *NativeCollection.<computed> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:76:43
+      3    4.1%      LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+      2   66.7%        LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      2  100.0%          LazyCompile: ~handleOperationResult /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sdam/server.js:315:42
+      2  100.0%            LazyCompile: ~messageHandler /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1   33.3%        LazyCompile: ~completeEndSession /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/sessions.js:138:40
+      1  100.0%          LazyCompile: *maybePromise /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:506:22
+      1  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/mongodb/lib/utils.js:518:13
+
+    497    2.6%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    497  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    497  100.0%      LazyCompile: ~readSync fs.js:536:18
+    497  100.0%        LazyCompile: ~tryReadSync fs.js:349:21
+    497  100.0%          LazyCompile: ~readFileSync fs.js:361:22
+    495   99.6%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+
+    411    2.2%  T void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+    411  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    168   40.9%      LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+    168  100.0%        LazyCompile: ~Writable.write _stream_writable.js:291:36
+    168  100.0%          LazyCompile: ~value internal/console/constructor.js:243:20
+    168  100.0%            LazyCompile: ~log internal/console/constructor.js:342:6
+    132   32.1%      LazyCompile: *value internal/console/constructor.js:243:20
+    132  100.0%        LazyCompile: ~log internal/console/constructor.js:342:6
+    117   88.6%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     81   69.2%            LazyCompile: *_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+     36   30.8%            LazyCompile: *sendToListeners /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:22:25
+     15   11.4%          t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     15  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+     59   14.4%      LazyCompile: *Socket._writeGeneric net.js:761:42
+     59  100.0%        LazyCompile: *value internal/console/constructor.js:243:20
+     59  100.0%          LazyCompile: ~log internal/console/constructor.js:342:6
+     59  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     34    8.3%      LazyCompile: *Writable.write _stream_writable.js:291:36
+     34  100.0%        LazyCompile: ~value internal/console/constructor.js:243:20
+     34  100.0%          LazyCompile: ~log internal/console/constructor.js:342:6
+     34  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    3.6%      LazyCompile: ~Writable.write _stream_writable.js:291:36
+     15  100.0%        LazyCompile: ~value internal/console/constructor.js:243:20
+     15  100.0%          LazyCompile: ~log internal/console/constructor.js:342:6
+     15  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+
+    210    1.1%  T _mach_msg_send
+    145   69.0%    LazyCompile: *handleWriteReq internal/stream_base_commons.js:47:24
+    120   82.8%      LazyCompile: *value internal/console/constructor.js:243:20
+    120  100.0%        LazyCompile: ~log internal/console/constructor.js:342:6
+     88   73.3%          T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     88  100.0%            LazyCompile: *_log /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/logger.js:81:7
+     32   26.7%          t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     32  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+     25   17.2%      LazyCompile: *Socket._writeGeneric net.js:761:42
+     24   96.0%        LazyCompile: *Writable.write _stream_writable.js:291:36
+     24  100.0%          LazyCompile: ~ondata _stream_readable.js:716:18
+     24  100.0%            LazyCompile: *emit events.js:262:44
+      1    4.0%        LazyCompile: *ondata _stream_readable.js:716:18
+      1  100.0%          LazyCompile: *emit events.js:262:44
+      1  100.0%            LazyCompile: *readableAddChunk _stream_readable.js:221:26
+     62   29.5%    LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+     62  100.0%      LazyCompile: *writeOrBuffer _stream_writable.js:355:23
+     37   59.7%        T __ZN2v88internal33Builtin_CallSitePrototypeToStringEiPmPNS0_7IsolateE
+     27   73.0%          LazyCompile: *<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+     27  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/log4js.js:41:29
+     10   27.0%          LazyCompile: *sendToListeners /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/clustering.js:22:25
+     10  100.0%            LazyCompile: *exports.listProducts /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/src/controllers/product.js:5:24
+     25   40.3%        t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+     25  100.0%          LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/appenders/console.js:5:10
+     25  100.0%            LazyCompile: ~<anonymous> /Users/marcelourreli/src/backend/coder-house-backend/proyecto-final/node_modules/log4js/lib/log4js.js:41:29
+
